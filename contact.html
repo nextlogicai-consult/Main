@@ -1,83 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Book a Free Discovery Call — NextLogicAI Consulting</title>
-<link rel="stylesheet" href="style.css">
-</head>
+<form id="contactForm">
+  <h2>Tell us about your business</h2>
 
-<body>
-<script src="shared.js"></script>
-
-<section id="contact-main">
-  <div class="contact-layout">
-
-    <div class="contact-info">
-      <h3>Book a Discovery Call</h3>
-      <p>45 minutes. No pitch. Just a real conversation about your business.</p>
+  <!-- NAME ROW -->
+  <div class="form-row">
+    <div class="form-group">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="fname" required>
     </div>
 
-    <div class="contact-form-wrap">
-
-      <!-- ✅ REAL FORM -->
-      <form id="contactForm">
-        <h2>Tell us about your business</h2>
-
-        <div class="form-row">
-          <input type="text" id="fname" name="fname" placeholder="First Name" required>
-          <input type="text" id="lname" name="lname" placeholder="Last Name">
-        </div>
-
-        <input type="email" id="email" name="email" placeholder="Email Address" required>
-
-        <input type="text" id="business" name="business" placeholder="Business Name">
-
-        <select id="industry" name="industry" required>
-          <option value="">Select your industry</option>
-          <option>Trades & Field Services</option>
-          <option>Salons & Hospitality</option>
-          <option>Real Estate</option>
-          <option>Professional Services</option>
-          <option>Retail & E-Commerce</option>
-          <option>Health & Wellness</option>
-          <option>Coaching & Consulting</option>
-          <option>Other</option>
-        </select>
-
-        <textarea id="pain" name="pain" placeholder="Biggest problem you're trying to solve"></textarea>
-
-        <select id="timeline" name="timeline">
-          <option value="">Timeline</option>
-          <option>As soon as possible</option>
-          <option>Within the next month</option>
-          <option>1 to 3 months</option>
-          <option>Just exploring</option>
-        </select>
-
-        <button type="submit" class="form-submit">
-          Request a Discovery Call →
-        </button>
-
-        <p id="formStatus" class="form-note"></p>
-      </form>
-
-      <!-- Success state -->
-      <div id="formSuccess" style="display:none;">
-        <h3>Request received!</h3>
-        <p>We’ll be in touch within 4 business hours.</p>
-      </div>
-
+    <div class="form-group">
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lname">
     </div>
-
   </div>
-</section>
 
-<script src="contact.js"></script>
-<script>
-  injectNav('contact');
-  injectFooter();
-</script>
+  <!-- EMAIL -->
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required>
+  </div>
 
-</body>
-</html>
+  <!-- BUSINESS -->
+  <div class="form-group">
+    <label for="business">Business Name</label>
+    <input type="text" id="business" name="business">
+  </div>
+
+  <!-- INDUSTRY -->
+  <div class="form-group">
+    <label for="industry">Select your industry</label>
+    <select id="industry" name="industry" required>
+      <option value="">Choose one...</option>
+      <option>Trades & Field Services</option>
+      <option>Salons & Hospitality</option>
+      <option>Real Estate</option>
+      <option>Professional Services</option>
+      <option>Retail & E-Commerce</option>
+      <option>Health & Wellness</option>
+      <option>Coaching & Consulting</option>
+      <option>Other</option>
+    </select>
+  </div>
+
+  <!-- PAIN POINT -->
+  <div class="form-group">
+    <label for="pain">Biggest problem you're trying to solve</label>
+    <textarea id="pain" name="pain"></textarea>
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="form-group">
+    <label for="timeline">Timeline</label>
+    <select id="timeline" name="timeline">
+      <option value="">Select timeline</option>
+      <option>As soon as possible</option>
+      <option>Within the next month</option>
+      <option>1 to 3 months</option>
+      <option>Just exploring</option>
+    </select>
+  </div>
+
+  <button type="submit" class="form-submit">
+    Request a Discovery Call →
+  </button>
+
+  <p id="formStatus" class="form-note"></p>
+</form>
