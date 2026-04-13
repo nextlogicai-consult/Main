@@ -2,7 +2,7 @@ backend:
   name: github
   repo: nextlogicai-consult/Main
   branch: main
-  base_url: https://netlify-cms-github-oauth-provider-pink-delta.vercel.app
+  base_url: https://netlify-cms-github-oauth-provider-jet-eta.vercel.app
   auth_endpoint: /auth
   
 media_folder: "images/blog"
