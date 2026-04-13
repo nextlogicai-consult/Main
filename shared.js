@@ -3,12 +3,12 @@
 
 function injectNav(activePage) {
   const pages = [
-    { id: 'index', label: 'Home', href: 'index.html' },
+    { id: 'index',        label: 'Home',         href: 'index.html' },
     { id: 'how-it-works', label: 'How It Works', href: 'how-it-works.html' },
-    { id: 'services', label: 'Services', href: 'services.html' },
-    { id: 'packages', label: 'Packages', href: 'packages.html' },
-    { id: 'blog', label: 'Blog', href: 'blog.html' },
-    { id: 'contact', label: 'Contact', href: 'contact.html' },
+    { id: 'services',     label: 'Services',     href: 'services.html' },
+    { id: 'packages',     label: 'Packages',     href: 'packages.html' },
+    { id: 'blog',         label: 'Blog',         href: 'blog.html' },
+    { id: 'contact',      label: 'Contact',      href: 'contact.html' },
   ];
 
   const links = pages
@@ -19,7 +19,7 @@ function injectNav(activePage) {
   document.body.insertAdjacentHTML('afterbegin', `
     <nav>
       <a href="index.html" class="nav-logo">
-      <img src="logo.png" alt="NextLogicAI" class="nav-logo-img">
+        <img src="logo.png" alt="NextLogicAI Consulting" class="nav-logo-img">
       </a>
       <ul class="nav-links">
         ${links}
@@ -34,7 +34,6 @@ function injectNav(activePage) {
     </div>
   `);
 
-  // Hamburger logic
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
   hamburger.addEventListener('click', () => {
@@ -68,7 +67,7 @@ function injectFooter() {
     <footer>
       <div>
         <div class="footer-brand">NextLogic<span>AI</span> Consulting</div>
-        <div class="footer-sub">Alberta, Canada · AI Integration for SMBs · © 2025</div>
+        <div class="footer-sub">AI Integration for Small &amp; Mid-Sized Businesses · © 2025</div>
       </div>
       <div class="footer-links">
         <a href="index.html">Home</a>

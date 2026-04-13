@@ -6,484 +6,28 @@
 <title>AI Insights &amp; Tips for Small Businesses — NextLogicAI Blog</title>
 <meta name="description" content="Practical AI advice for small businesses. No hype — just real use cases, workflow automation tips, tool guides, and ROI-first strategies for trades, retail, real estate, and more.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.nextlogicai.ca/blog.html">
-
-<!-- Open Graph -->
+<link rel="canonical" href="https://www.nextlogic-ai.com/blog.html">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.nextlogicai.ca/blog.html">
+<meta property="og:url" content="https://www.nextlogic-ai.com/blog.html">
 <meta property="og:title" content="AI Insights &amp; Tips for Small Businesses — NextLogicAI Blog">
 <meta property="og:description" content="Practical AI advice for small businesses. No hype — just real use cases, workflow automation tips, tool guides, and ROI-first strategies.">
-<meta property="og:image" content="https://www.nextlogicai.ca/og-image.jpg">
+<meta property="og:image" content="https://www.nextlogic-ai.com/og-image.jpg">
 <meta property="og:site_name" content="NextLogicAI Consulting">
 <meta property="og:locale" content="en_CA">
-
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="AI Insights &amp; Tips for Small Businesses — NextLogicAI Blog">
 <meta name="twitter:description" content="Practical AI advice for small businesses. Real use cases, automation tips, and ROI-first strategies — no hype.">
-<meta name="twitter:image" content="https://www.nextlogicai.ca/og-image.jpg">
-
-<!-- JSON-LD: Blog -->
+<meta name="twitter:image" content="https://www.nextlogic-ai.com/og-image.jpg">
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "NextLogicAI Blog",
-  "description": "Practical AI advice for small businesses — real use cases, workflow automation tips, tool guides, and ROI-first strategies.",
-  "url": "https://www.nextlogicai.ca/blog.html",
-  "publisher": {
-    "@type": "Organization",
-    "name": "NextLogicAI Consulting",
-    "url": "https://www.nextlogicai.ca"
-  }
-}
+{"@context":"https://schema.org","@type":"Blog","name":"NextLogicAI Blog","description":"Practical AI advice for small businesses — real use cases, workflow automation tips, tool guides, and ROI-first strategies.","url":"https://www.nextlogic-ai.com/blog.html","publisher":{"@type":"Organization","name":"NextLogicAI Consulting","url":"https://www.nextlogic-ai.com"}}
 </script>
 <link rel="stylesheet" href="style.css">
-<style>
-
-/* ── BLOG PAGE ── */
-
-/* ── CATEGORY FILTER BAR ── */
-#blog-filter {
-  background: var(--navy-mid);
-  border-bottom: 1px solid var(--border);
-  padding: 0 4rem;
-  position: sticky;
-  top: 65px;
-  z-index: 90;
-}
-.filter-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  overflow-x: auto;
-  padding: 1rem 0;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-.filter-inner::-webkit-scrollbar { display: none; }
-
-.filter-btn {
-  padding: 0.45rem 1.1rem;
-  border-radius: 100px;
-  border: 1px solid var(--border);
-  background: transparent;
-  color: var(--muted);
-  font-family: 'Syne', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.filter-btn:hover,
-.filter-btn.active {
-  background: rgba(124,58,237,0.15);
-  border-color: rgba(124,58,237,0.5);
-  color: var(--white);
-}
-
-/* ── FEATURED POST ── */
-#featured {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.featured-card {
-  background: linear-gradient(135deg, rgba(124,58,237,0.12), rgba(6,214,245,0.06));
-  border: 1px solid rgba(124,58,237,0.3);
-  border-radius: 20px;
-  padding: 3rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  transition: border-color 0.25s;
-}
-.featured-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--violet), var(--cyan));
-}
-.featured-card:hover { border-color: rgba(124,58,237,0.5); }
-
-.featured-meta {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  margin-bottom: 1.2rem;
-  flex-wrap: wrap;
-}
-.featured-badge {
-  background: linear-gradient(135deg, var(--violet), var(--cyan-dim));
-  color: white;
-  font-family: 'Syne', sans-serif;
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 0.25rem 0.75rem;
-  border-radius: 100px;
-}
-.post-category-tag {
-  font-family: 'Syne', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--cyan);
-}
-.post-date {
-  font-size: 0.78rem;
-  color: var(--muted);
-  font-weight: 300;
-}
-
-.featured-card h2 {
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
-  font-weight: 800;
-  letter-spacing: -0.025em;
-  line-height: 1.15;
-  margin-bottom: 1rem;
-}
-.featured-card p {
-  font-size: 0.95rem;
-  color: var(--muted);
-  line-height: 1.75;
-  font-weight: 300;
-  margin-bottom: 1.8rem;
-}
-.featured-read-time {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.78rem;
-  color: var(--muted);
-  margin-bottom: 1.8rem;
-}
-
-.featured-visual {
-  background: linear-gradient(135deg, rgba(124,58,237,0.2), rgba(6,214,245,0.1));
-  border: 1px solid rgba(124,58,237,0.2);
-  border-radius: 14px;
-  height: 260px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  position: relative;
-  overflow: hidden;
-}
-.featured-visual-icon { font-size: 3.5rem; }
-.featured-visual-label {
-  font-family: 'Syne', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--violet-light);
-  opacity: 0.8;
-}
-.featured-visual-grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(124,58,237,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(124,58,237,0.06) 1px, transparent 1px);
-  background-size: 30px 30px;
-}
-
-/* ── BLOG GRID ── */
-#blog-grid { max-width: 1200px; margin: 0 auto; }
-
-.blog-section-header {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-.blog-section-header h2 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--white);
-}
-.post-count {
-  font-size: 0.82rem;
-  color: var(--muted);
-  font-weight: 300;
-}
-
-.posts-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.post-card {
-  background: var(--navy-light);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 1.8rem;
-  display: flex;
-  flex-direction: column;
-  transition: border-color 0.25s, transform 0.25s;
-  cursor: pointer;
-}
-.post-card:hover { border-color: rgba(124,58,237,0.4); transform: translateY(-3px); }
-.post-card.hidden { display: none; }
-
-.post-card-meta {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
-}
-.post-card h3 {
-  font-size: 0.98rem;
-  font-weight: 700;
-  line-height: 1.4;
-  letter-spacing: -0.01em;
-  margin-bottom: 0.7rem;
-  flex: 1;
-}
-.post-card p {
-  font-size: 0.84rem;
-  color: var(--muted);
-  line-height: 1.65;
-  font-weight: 300;
-  flex: 1;
-  margin-bottom: 1.4rem;
-}
-
-.post-card-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: auto;
-  padding-top: 1.2rem;
-  border-top: 1px solid var(--border);
-}
-.post-read-time {
-  font-size: 0.75rem;
-  color: var(--muted);
-  font-weight: 300;
-}
-.post-link {
-  font-family: 'Syne', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--cyan);
-  text-decoration: none;
-  transition: color 0.2s;
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-.post-link:hover { color: var(--white); }
-
-.post-priority-dot {
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--cyan);
-  box-shadow: 0 0 6px var(--cyan);
-  flex-shrink: 0;
-}
-
-/* ── PILLAR PAGES STRIP ── */
-#pillars {
-  background: var(--navy-mid);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-.pillars-inner { max-width: 1200px; margin: 0 auto; }
-.pillars-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem;
-  margin-top: 3rem;
-}
-.pillar-card {
-  background: var(--navy);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 1.8rem;
-  transition: border-color 0.25s, transform 0.25s;
-  position: relative;
-  overflow: hidden;
-}
-.pillar-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  transition: opacity 0.25s;
-  opacity: 0;
-}
-.pillar-card:hover { border-color: rgba(124,58,237,0.4); transform: translateY(-2px); }
-.pillar-card:hover::before { opacity: 1; }
-.pc-1::before { background: linear-gradient(90deg, var(--violet), var(--violet-light)); }
-.pc-2::before { background: linear-gradient(90deg, var(--cyan-dim), var(--cyan)); }
-.pc-3::before { background: linear-gradient(90deg, var(--violet), var(--cyan)); }
-.pc-4::before { background: linear-gradient(90deg, #10b981, #06d6f5); }
-.pc-5::before { background: linear-gradient(90deg, var(--violet-light), var(--violet)); }
-.pc-6::before { background: linear-gradient(90deg, #f59e0b, #ef4444); }
-
-.pillar-icon { font-size: 1.5rem; margin-bottom: 1rem; }
-.pillar-card h3 { font-size: 0.92rem; font-weight: 700; margin-bottom: 0.4rem; }
-.pillar-card p { font-size: 0.8rem; color: var(--muted); line-height: 1.6; font-weight: 300; margin-bottom: 1rem; }
-.pillar-count { font-size: 0.72rem; color: var(--violet-light); font-family: 'Syne', sans-serif; font-weight: 600; letter-spacing: 0.06em; }
-
-/* ── CONTENT CALENDAR PREVIEW ── */
-#publishing-plan { max-width: 1200px; margin: 0 auto; }
-.plan-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem;
-  margin-top: 3rem;
-}
-.plan-month {
-  background: var(--navy-light);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 1.6rem;
-  transition: border-color 0.25s;
-}
-.plan-month:hover { border-color: rgba(124,58,237,0.3); }
-.plan-month-num {
-  font-family: 'Syne', sans-serif;
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--violet-light);
-  opacity: 0.7;
-  margin-bottom: 0.5rem;
-}
-.plan-month h4 { font-size: 0.88rem; font-weight: 700; margin-bottom: 0.8rem; }
-.plan-month ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-.plan-month ul li {
-  font-size: 0.78rem;
-  color: var(--muted);
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-  font-weight: 300;
-  line-height: 1.45;
-}
-.plan-month ul li::before {
-  content: '→';
-  color: var(--cyan);
-  font-size: 0.65rem;
-  flex-shrink: 0;
-  margin-top: 0.2em;
-}
-.plan-cta {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0.8rem;
-  text-align: center;
-  background: linear-gradient(135deg, rgba(124,58,237,0.1), rgba(6,214,245,0.05));
-  border: 1px dashed rgba(124,58,237,0.3);
-  border-radius: 14px;
-  padding: 1.6rem;
-}
-.plan-cta p { font-size: 0.82rem; color: var(--muted); font-weight: 300; }
-
-/* ── NEWSLETTER / NOTIFY ── */
-#notify {
-  background: var(--navy-mid);
-  border-top: 1px solid var(--border);
-}
-.notify-inner {
-  max-width: 640px;
-  margin: 0 auto;
-  text-align: center;
-}
-.notify-inner h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 800; letter-spacing: -0.025em; margin-bottom: 0.8rem; }
-.notify-inner p { font-size: 0.95rem; color: var(--muted); line-height: 1.7; font-weight: 300; margin-bottom: 2rem; }
-.notify-form {
-  display: flex;
-  gap: 0.75rem;
-  max-width: 480px;
-  margin: 0 auto;
-}
-.notify-input {
-  flex: 1;
-  background: rgba(10,15,30,0.8);
-  border: 1px solid rgba(124,58,237,0.3);
-  border-radius: 8px;
-  padding: 0.85rem 1.1rem;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.9rem;
-  color: var(--white);
-  outline: none;
-  transition: border-color 0.2s;
-}
-.notify-input:focus { border-color: rgba(124,58,237,0.6); }
-.notify-input::placeholder { color: var(--muted); opacity: 0.6; }
-.notify-note { font-size: 0.75rem; color: var(--muted); margin-top: 0.75rem; font-weight: 300; }
-
-/* ── RESPONSIVE ── */
-@media (max-width: 1024px) {
-  #blog-filter { padding: 0 2rem; }
-  .posts-grid { grid-template-columns: repeat(2, 1fr); }
-  .pillars-grid { grid-template-columns: repeat(2, 1fr); }
-  .plan-grid { grid-template-columns: repeat(2, 1fr); }
-  .featured-card { gap: 2.5rem; }
-}
-
-@media (max-width: 768px) {
-  #blog-filter { padding: 0 1.25rem; top: 57px; }
-  #featured { padding: 3.5rem 1.25rem; }
-  .featured-card {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 2rem 1.5rem;
-  }
-  .featured-visual { height: 180px; }
-  #blog-grid { padding: 3.5rem 1.25rem; }
-  .posts-grid { grid-template-columns: 1fr; }
-  #pillars { padding: 3.5rem 1.25rem; }
-  .pillars-grid { grid-template-columns: 1fr 1fr; }
-  #publishing-plan { padding: 3.5rem 1.25rem; }
-  .plan-grid { grid-template-columns: 1fr; }
-  #notify { padding: 3.5rem 1.25rem; }
-  .notify-form { flex-direction: column; }
-  .notify-form .btn-primary { width: 100%; text-align: center; }
-}
-
-@media (max-width: 480px) {
-  .pillars-grid { grid-template-columns: 1fr; }
-}
-</style>
 </head>
 <body>
 <script src="shared.js"></script>
 
-<!-- PAGE HERO -->
 <div class="page-hero">
-  <div class="page-hero-bg">
-    <div class="grid-lines"></div>
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-  </div>
+  <div class="page-hero-bg"><div class="grid-lines"></div><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
   <div class="page-hero-inner">
     <div class="page-hero-label">The NextLogicAI Blog</div>
     <h1>Practical AI for<br><span class="accent-c">real businesses</span></h1>
@@ -492,7 +36,6 @@
 </div>
 <hr class="divider">
 
-<!-- CATEGORY FILTER -->
 <div id="blog-filter">
   <div class="filter-inner">
     <button class="filter-btn active" data-filter="all">All Posts</button>
@@ -505,291 +48,50 @@
   </div>
 </div>
 
-<!-- FEATURED POST -->
 <section id="featured">
-  <div class="reveal">
-    <div class="section-label">Featured Post</div>
-  </div>
+  <div class="reveal"><div class="section-label">Featured Post</div></div>
   <div class="featured-card reveal" data-category="ai-small-business">
     <div>
       <div class="featured-meta">
         <span class="featured-badge">Priority Read</span>
         <span class="post-category-tag">AI for Small Business</span>
-        <span class="post-date">June 5, 2025 · 8 min read</span>
+        <span class="post-date">June 3, 2024 · 8 min read</span>
       </div>
       <h2>How Small Businesses Can Start Using AI Without Wasting Money</h2>
-      <p>Most small businesses are curious about AI but don't know where to start — and end up buying tools that don't fit their operation. This guide cuts through the noise and shows you exactly how to approach AI adoption in a way that saves time and delivers real ROI, without overspending or overcomplicating things.</p>
-      <div class="featured-read-time">⏱ 8 minute read &nbsp;·&nbsp; Local SEO + trust-building</div>
-      <a href="post.html?slug=how-small-businesses-can-start-using-ai" class="post-link">Read →</a>
+      <p>Most small businesses are curious about AI but don't know where to start and end up buying tools that don't fit their operation. This guide cuts through the noise and shows you exactly how to approach AI adoption in a way that saves time and delivers real ROI.</p>
+      <div class="featured-read-time">⏱ 8 minute read &nbsp;·&nbsp; AI Adoption · Small Business</div>
+      <a href="post.html?slug=how-small-businesses-can-start-using-ai" class="btn-primary">Read the Article →</a>
     </div>
     <div class="featured-visual">
       <div class="featured-visual-grid"></div>
       <div class="featured-visual-icon">🚀</div>
-      <div class="featured-visual-label">Foundational · Month 1</div>
+      <div class="featured-visual-label">Start Here</div>
     </div>
   </div>
 </section>
 
-<!-- BLOG GRID -->
 <section id="blog-grid">
   <div class="blog-section-header reveal">
     <h2>All Articles</h2>
-    <span class="post-count" id="post-count">18 articles</span>
+    <span class="post-count" id="post-count">2 articles</span>
   </div>
-
   <div class="posts-grid" id="postsGrid">
-
-    <!-- POST 1 (featured above, shown again as card) -->
     <div class="post-card reveal" data-category="ai-small-business">
-      <div class="post-card-meta">
-        <span class="post-priority-dot"></span>
-        <span class="post-category-tag">AI for Small Business</span>
-      </div>
+      <div class="post-card-meta"><span class="post-priority-dot"></span><span class="post-category-tag">AI for Small Business</span></div>
       <h3>How Small Businesses Can Start Using AI Without Wasting Money</h3>
       <p>The practical starting point every SMB needs before buying a single AI tool. Cuts through the noise from the first paragraph.</p>
-      <div class="post-card-footer">
-        <span class="post-read-time">⏱ 8 min · Month 1</span>
-        <a href="post.html?slug=how-small-businesses-can-start-using-ai" class="post-link">Read →</a>
-      </div>
+      <div class="post-card-footer"><span class="post-read-time">⏱ 8 min · June 2024</span><a href="post.html?slug=how-small-businesses-can-start-using-ai" class="post-link">Read →</a></div>
     </div>
-
-   <!-- POST 2 -->
     <div class="post-card reveal" data-category="ai-small-business">
-      <div class="post-card-meta">
-        <span class="post-priority-dot"></span>
-        <span class="post-category-tag">AI for Small Business</span>
-      </div>
+      <div class="post-card-meta"><span class="post-priority-dot"></span><span class="post-category-tag">AI for Small Business</span></div>
       <h3>What AI Can Actually Do for a Small Business in 2026</h3>
       <p>A plain-English breakdown of real AI capabilities vs. the hype — written for non-technical business owners who want to understand what's actually worth doing.</p>
-      <div class="post-card-footer">
-        <span class="post-read-time">⏱ 6 min · Month 1</span>
-        <a href="post.html?slug=what-ai-can-actually-do-for-a-small-business-in-2026" class="post-link">Read →</a>
-      </div>
+      <div class="post-card-footer"><span class="post-read-time">⏱ 6 min · July 2024</span><a href="post.html?slug=what-ai-can-actually-do-for-a-small-business-in-2026" class="post-link">Read →</a></div>
     </div>
-
-    <!-- POST 3 -->
-    <div class="post-card reveal" data-category="ai-small-business">
-      <div class="post-card-meta">
-        <span class="post-priority-dot"></span>
-        <span class="post-category-tag">AI for Small Business</span>
-      </div>
-      <h3>How to Tell if Your Business Is Ready for AI</h3>
-      <p>Before buying tools or hiring consultants, answer these questions. A readiness framework that qualifies serious buyers and builds trust with skeptical ones.</p>
-      <div class="post-card-footer">
-        <span class="post-read-time">⏱ 7 min · Month 1</span>
-        <a href="post.html?slug=how-to-tell-if-your-business-is-ready-for-ai" class="post-link">Read →</a>
-      </div>
-    </div>
-
-    <!-- POST 4 -->
-    <div class="post-card reveal" data-category="ai-small-business">
-      <div class="post-card-meta">
-        <span class="post-category-tag">AI for Small Business</span>
-      </div>
-      <h3>The Best AI Use Cases for Small Businesses That Want Real ROI</h3>
-      <p>Not every AI application is worth the effort. Here are the use cases that consistently deliver measurable time savings and revenue impact for small operations.</p>
-      <div class="post-card-footer">
-        <span class="post-read-time">⏱ 9 min · Month 8</span>
-        <a href="post.html?slug=best-ai-use-cases-for-small-businesses" class="post-link">Read →</a>
-      </div>
-    </div>
-
-    <!-- POST 5 -->
-    <div class="post-card reveal" data-category="ai-small-business">
-      <div class="post-card-meta">
-        <span class="post-category-tag">AI for Small Business</span>
-      </div>
-      <h3>A Practical AI Adoption Checklist for Small Business Owners</h3>
-      <p>A step-by-step checklist covering everything from identifying your first use case to launching and monitoring your first AI system. Great lead magnet content.</p>
-      <div class="post-card-footer">
-        <span class="post-read-time">⏱ 6 min · Month 12</span>
-        <a href="post.html?slug=practical-ai-adoption-checklist-for-small-business-owners" class="post-link">Read →</a>
-      </div>
-    </div>
-
-    <!-- POST 6 -->
-    <div class="post-card reveal" data-category="workflow-automation">
-      <div class="post-card-meta">
-        <span class="post-priority-dot"></span>
-        <span class="post-category-tag">Workflow Automation</span>
-      </div>
-      <h3>7 Repetitive Admin Tasks Small Businesses Should Automate First</h3>
-      <p>If your team does any of these seven tasks manually every week, you're losing hours you can't get back. Start here before anything else.</p>
-      <div class="post-card-footer">
-        <span class="post-read-time">⏱ 8 min · Month 2</span>
-        <a href="post.html?slug=7-repetitive-admin-tasks-to-automate-first" class="post-link">Read →</a>
-      </div>
-    </div>
-
-    <!-- POST 7 -->
-    <div class="post-card reveal" data-category="workflow-automation">
-      <div class="post-card-meta">
-        <span class="post-priority-dot"></span>
-        <span class="post-category-tag">Workflow Automation</span>
-      </div>
-      <h3>How to Automate Lead Follow-Up for a Small Business</h3>
-      <p>Leads that don't hear back within hours rarely convert. Here's how to build a follow-up automation that works 24/7 without adding headcount.</p>
-      <div class="post-card-footer">
-        <span class="post-read-time">⏱ 7 min · Month 2</span>
-        <a href="post.html?slug=how-to-automate-lead-follow-up" class="post-link">Read →</a>
-      </div>
-    </div>
-
-    <!-- POST 8 -->
-    <div class="post-card reveal" data-category="workflow-automation">
-      <div class="post-card-meta">
-        <span class="post-category-tag">Workflow Automation</span>
-      </div>
-      <h3>How AI Workflow Automation Saves Time Without Replacing Your Team</h3>
-      <p>The biggest fear small business owners have about automation is getting it wrong. Here's how to implement it in a way that empowers your team instead.</p>
-      <div class="post-card-footer">
-        <span class="post-read-time">⏱ 7 min · Month 2</span>
-        <a href="post.html?slug=ai-workflow-automation-without-replacing-your-team" class="post-link">Read →</a>
-      </div>
-    </div>
-
-    <!-- POST 9 -->
-    <div class="post-card reveal" data-category="workflow-automation">
-      <div class="post-card-meta">
-        <span class="post-category-tag">Workflow Automation</span>
-      </div>
-      <h3>The Best Processes to Automate Before Hiring More Staff</h3>
-      <p>Before you add to payroll, ask whether the work could be automated. A practical guide to identifying the right processes to tackle first.</p>
-      <div class="post-card-footer">
-        <span class="post-read-time">⏱ 6 min · Month 2</span>
-        <a href="post.html?slug=best-processes-to-automate-before-hiring" class="post-link">Read →</a>
-      </div>
-    </div>
-
-    <!-- POST 10 -->
-    <div class="post-card reveal" data-category="workflow-automation">
-      <div class="post-card-meta">
-        <span class="post-category-tag">Workflow Automation</span>
-      </div>
-      <h3>How to Connect Your Existing Tools Into One Smarter Workflow</h3>
-      <p>You don't need new software — you need your current tools talking to each other. Here's how to build connected workflows from what you already use.</p>
-      <div class="post-card-footer">
-        <span class="post-read-time">⏱ 8 min · Month 10</span>
-        <a href="post.html?slug=how-to-connect-your-existing-tools-into-one-workflow" class="post-link">Read →</a>
-      </div>
-    </div>
-
-    <!-- POST 11 -->
-    <div class="post-card reveal" data-category="ai-tools">
-      <div class="post-card-meta">
-        <span class="post-priority-dot"></span>
-        <span class="post-category-tag">AI Tools &amp; Selection</span>
-      </div>
-      <h3>How to Choose the Right AI Tools for Your Business</h3>
-      <p>There are thousands of AI tools. Most of them aren't right for a small service business. Here's a practical framework for evaluating and choosing without getting burned.</p>
-      <div class="post-card-footer">
-        <span class="post-read-time">⏱ 8 min · Month 3</span>
-        <a href="post.html?slug=how-to-choose-the-right-ai-tools" class="post-link">Read →</a>
-      </div>
-    </div>
-
-    <!-- POST 12 -->
-    <div class="post-card reveal" data-category="ai-tools">
-      <div class="post-card-meta">
-        <span class="post-priority-dot"></span>
-        <span class="post-category-tag">AI Tools &amp; Selection</span>
-      </div>
-      <h3>The Biggest Mistakes Small Businesses Make When Buying AI Software</h3>
-      <p>Most failed AI implementations come down to the same handful of avoidable mistakes. This post is one of the strongest trust-builders on your site.</p>
-      <div class="post-card-footer">
-        <span class="post-read-time">⏱ 7 min · Month 3</span>
-        <a href="post.html?slug=biggest-mistakes-buying-ai-software" class="post-link">Read →</a>
-      </div>
-    </div>
-
-    <!-- POST 13 -->
-    <div class="post-card reveal" data-category="ai-tools">
-      <div class="post-card-meta">
-        <span class="post-category-tag">AI Tools &amp; Selection</span>
-      </div>
-      <h3>ChatGPT vs Business Automation Tools: What Small Businesses Actually Need</h3>
-      <p>ChatGPT is not a business automation platform. Here's what the distinction means in practice and how to think about which category of tool fits your situation.</p>
-      <div class="post-card-footer">
-        <span class="post-read-time">⏱ 6 min · Month 3</span>
-        <a href="post.html?slug=chatgpt-vs-business-automation-tools" class="post-link">Read →</a>
-      </div>
-    </div>
-
-    <!-- POST 14 -->
-    <div class="post-card reveal" data-category="ai-tools">
-      <div class="post-card-meta">
-        <span class="post-category-tag">AI Tools &amp; Selection</span>
-      </div>
-      <h3>What to Look for in an AI Consultant for a Small Business</h3>
-      <p>Not all AI consultants are built the same. Here's what questions to ask, what red flags to watch for, and what good implementation support actually looks like.</p>
-      <div class="post-card-footer">
-        <span class="post-read-time">⏱ 6 min · Month 9</span>
-        <a href="post.html?slug=what-to-look-for-in-an-ai-consultant" class="post-link">Read →</a>
-      </div>
-    </div>
-
-    <!-- POST 15 -->
-    <div class="post-card reveal" data-category="industry-guides">
-      <div class="post-card-meta">
-        <span class="post-category-tag">Industry Guides</span>
-      </div>
-      <h3>How Healthcare Clinics Can Use AI for Admin and Patient Communication</h3>
-      <p>Appointment booking, follow-ups, intake forms, and patient FAQs are all automatable. Here's what works for clinics without compromising quality of care.</p>
-      <div class="post-card-footer">
-        <span class="post-read-time">⏱ 7 min · Month 5</span>
-        <a href="post.html?slug=how-healthcare-clinics-can-use-ai" class="post-link">Read →</a>
-      </div>
-    </div>
-
-    <!-- POST 16 -->
-    <div class="post-card reveal" data-category="industry-guides">
-      <div class="post-card-meta">
-        <span class="post-category-tag">Industry Guides</span>
-      </div>
-      <h3>How Retail Businesses Can Use AI to Save Time and Improve Customer Service</h3>
-      <p>Product descriptions, inventory alerts, support bots, and abandoned cart recovery — here's a practical AI roadmap for retail and e-commerce operations.</p>
-      <div class="post-card-footer">
-        <span class="post-read-time">⏱ 7 min · Month 6</span>
-        <a href="post.html?slug=how-retail-businesses-can-use-ai" class="post-link">Read →</a>
-      </div>
-    </div>
-
-    <!-- POST 17 -->
-    <div class="post-card reveal" data-category="industry-guides">
-      <div class="post-card-meta">
-        <span class="post-category-tag">Industry Guides</span>
-      </div>
-      <h3>How Contractors and Trades Businesses Can Use AI to Reduce Office Work</h3>
-      <p>Estimates, scheduling, invoice follow-ups, and job summaries. Trades businesses have some of the highest-ROI automation opportunities of any sector.</p>
-      <div class="post-card-footer">
-        <span class="post-read-time">⏱ 8 min · Month 6</span>
-        <a href="post.html?slug=how-contractors-and-trades-can-use-ai" class="post-link">Read →</a>
-      </div>
-    </div>
-
-    <!-- POST 18 -->
-    <div class="post-card reveal" data-category="industry-guides">
-      <div class="post-card-meta">
-        <span class="post-category-tag">Industry Guides</span>
-      </div>
-      <h3>How Professional Service Firms Can Use AI Without Risking Quality</h3>
-      <p>Lawyers, accountants, consultants, and advisors can automate admin without compromising the quality or accuracy their clients depend on. Here's how.</p>
-      <div class="post-card-footer">
-        <span class="post-read-time">⏱ 7 min · Month 5</span>
-        <a href="post.html?slug=how-professional-service-firms-can-use-ai" class="post-link">Read →</a>
-      </div>
-    </div>
-
-  </div><!-- /posts-grid -->
-
-  <!-- No results message -->
-  <div id="noResults" style="display:none; text-align:center; padding:4rem 0; color:var(--muted); font-size:0.95rem;">
-    No articles in this category yet — <a href="contact.html" style="color:var(--cyan); text-decoration:none;">check back soon</a>.
   </div>
-
+  <div id="noResults" style="display:none;text-align:center;padding:4rem 0;color:var(--muted);font-size:0.95rem;">No articles in this category yet — <a href="contact.html" style="color:var(--cyan);text-decoration:none;">check back soon</a>.</div>
 </section>
 
-<!-- CONTENT PILLARS -->
 <section id="pillars">
   <div class="pillars-inner">
     <div class="reveal">
@@ -798,47 +100,16 @@
       <p class="section-desc">Every article on this blog maps to one of six pillars — all designed to help small businesses make smarter decisions about AI.</p>
     </div>
     <div class="pillars-grid reveal">
-      <div class="pillar-card pc-1">
-        <div class="pillar-icon">💡</div>
-        <h3>AI for Small Business</h3>
-        <p>What AI can realistically do, how to get started, and how to avoid the common traps. Top-of-funnel content for curious owners.</p>
-        <div class="pillar-count">5 articles · Links to Discovery &amp; Audit</div>
-      </div>
-      <div class="pillar-card pc-2">
-        <div class="pillar-icon">⚙️</div>
-        <h3>Workflow Automation</h3>
-        <p>Practical guides to eliminating repetitive work — follow-ups, admin, scheduling, and connecting your existing tools.</p>
-        <div class="pillar-count">5 articles · Links to Builder Package</div>
-      </div>
-      <div class="pillar-card pc-3">
-        <div class="pillar-icon">🔧</div>
-        <h3>AI Tools &amp; Selection</h3>
-        <p>How to choose the right tools, avoid bad buys, and understand what different AI categories are actually for.</p>
-        <div class="pillar-count">4 articles · Links to Tool Selection</div>
-      </div>
-      <div class="pillar-card pc-4">
-        <div class="pillar-icon">🏭</div>
-        <h3>Industry Guides</h3>
-        <p>Sector-specific playbooks for healthcare, retail, trades, real estate, professional services, and more.</p>
-        <div class="pillar-count">4+ articles · Links to Builder &amp; Full System</div>
-      </div>
-      <div class="pillar-card pc-5">
-        <div class="pillar-icon">📊</div>
-        <h3>ROI &amp; Strategy</h3>
-        <p>How to think about AI investment, measure results, and build a realistic roadmap for a small business.</p>
-        <div class="pillar-count">Coming Month 8 · Links to Strategic Roadmap</div>
-      </div>
-      <div class="pillar-card pc-6">
-        <div class="pillar-icon">🎓</div>
-        <h3>Training &amp; Adoption</h3>
-        <p>Why AI rollouts fail and how to make them stick — team training, change management, and post-launch support.</p>
-        <div class="pillar-count">Coming Month 7 · Links to System Training</div>
-      </div>
+      <div class="pillar-card pc-1"><div class="pillar-icon">💡</div><h3>AI for Small Business</h3><p>What AI can realistically do, how to get started, and how to avoid the common traps.</p><div class="pillar-count">5 articles · Links to Discovery &amp; Audit</div></div>
+      <div class="pillar-card pc-2"><div class="pillar-icon">⚙️</div><h3>Workflow Automation</h3><p>Practical guides to eliminating repetitive work — follow-ups, admin, scheduling, and connecting your existing tools.</p><div class="pillar-count">5 articles · Links to Builder Package</div></div>
+      <div class="pillar-card pc-3"><div class="pillar-icon">🔧</div><h3>AI Tools &amp; Selection</h3><p>How to choose the right tools, avoid bad buys, and understand what different AI categories are actually for.</p><div class="pillar-count">4 articles · Links to Tool Selection</div></div>
+      <div class="pillar-card pc-4"><div class="pillar-icon">🏭</div><h3>Industry Guides</h3><p>Sector-specific playbooks for healthcare, retail, trades, real estate, professional services, and more.</p><div class="pillar-count">4+ articles · Links to Builder &amp; Full System</div></div>
+      <div class="pillar-card pc-5"><div class="pillar-icon">📊</div><h3>ROI &amp; Strategy</h3><p>How to think about AI investment, measure results, and build a realistic roadmap for a small business.</p><div class="pillar-count">Coming Soon · Links to Strategic Roadmap</div></div>
+      <div class="pillar-card pc-6"><div class="pillar-icon">🎓</div><h3>Training &amp; Adoption</h3><p>Why AI rollouts fail and how to make them stick — team training, change management, and post-launch support.</p><div class="pillar-count">Coming Soon · Links to System Training</div></div>
     </div>
   </div>
 </section>
 
-<!-- PUBLISHING PLAN PREVIEW -->
 <section id="publishing-plan">
   <div class="reveal">
     <div class="section-label">What's Coming</div>
@@ -846,46 +117,18 @@
     <p class="section-desc">We publish practical, evergreen content on a structured schedule — no filler, no AI news for its own sake.</p>
   </div>
   <div class="plan-grid reveal">
-    <div class="plan-month">
-      <div class="plan-month-num">Month 1 — Published</div>
-      <h4>AI for Small Business: The Foundations</h4>
-      <ul>
-        <li>How to start using AI without wasting money</li>
-        <li>What AI can actually do for a small business</li>
-        <li>How to tell if your business is ready</li>
-      </ul>
-    </div>
-    <div class="plan-month">
-      <div class="plan-month-num">Month 2 — Coming Soon</div>
-      <h4>Automation: Quick Wins &amp; Time Savers</h4>
-      <ul>
-        <li>7 admin tasks to automate first</li>
-        <li>How to automate lead follow-up</li>
-        <li>Best processes to automate before hiring</li>
-      </ul>
-    </div>
-    <div class="plan-month">
-      <div class="plan-month-num">Month 3 — Coming Soon</div>
-      <h4>Tools: How to Choose Without Getting Burned</h4>
-      <ul>
-        <li>How to choose the right AI tools</li>
-        <li>Biggest mistakes when buying AI software</li>
-        <li>ChatGPT vs business automation tools</li>
-      </ul>
-    </div>
-    <div class="plan-cta">
-      <p>Want to know when new articles go live? Get notified — no spam, just useful content.</p>
-      <a href="#notify" class="btn-secondary" style="font-size:0.85rem; padding:0.7rem 1.4rem;">Get Notified →</a>
-    </div>
+    <div class="plan-month"><div class="plan-month-num">Phase 1 — Published</div><h4>AI for Small Business: The Foundations</h4><ul><li>How to start using AI without wasting money</li><li>What AI can actually do for a small business</li><li>How to tell if your business is ready</li></ul></div>
+    <div class="plan-month"><div class="plan-month-num">Phase 2 — Coming Soon</div><h4>Automation: Quick Wins &amp; Time Savers</h4><ul><li>7 admin tasks to automate first</li><li>How to automate lead follow-up</li><li>Best processes to automate before hiring</li></ul></div>
+    <div class="plan-month"><div class="plan-month-num">Phase 3 — Coming Soon</div><h4>Tools: How to Choose Without Getting Burned</h4><ul><li>How to choose the right AI tools</li><li>Biggest mistakes when buying AI software</li><li>ChatGPT vs business automation tools</li></ul></div>
+    <div class="plan-cta"><p>Want to know when new articles go live? Get notified — no spam, just useful content.</p><a href="#notify" class="btn-secondary" style="font-size:0.85rem;padding:0.7rem 1.4rem;">Get Notified →</a></div>
   </div>
 </section>
 
-<!-- EMAIL NOTIFY -->
 <section id="notify">
   <div class="notify-inner reveal">
     <div class="section-label">Stay Updated</div>
     <h2>New articles, straight to your inbox</h2>
-    <p>We publish 2–3 articles per month on AI adoption, workflow automation, and practical implementation for small businesses. No hype, no fluff.</p>
+    <p>We publish 2 to 3 articles per month on AI adoption, workflow automation, and practical implementation for small businesses. No hype, no fluff.</p>
     <div class="notify-form">
       <input type="email" class="notify-input" placeholder="your@email.com" id="notifyEmail">
       <button class="btn-primary" onclick="subscribeNotify()" style="white-space:nowrap;">Notify Me</button>
@@ -894,11 +137,10 @@
   </div>
 </section>
 
-<!-- CTA STRIP -->
-<section style="padding:5rem 4rem;">
+<section class="cta-section">
   <div class="cta-strip reveal" style="max-width:1200px;margin:0 auto;">
     <h2>Ready to apply this to your business?</h2>
-    <p>Book a free discovery call. We'll identify the highest-value AI opportunity in your operation — and tell you honestly whether it's worth pursuing.</p>
+    <p>Book a free discovery call. We'll identify the highest-value AI opportunity in your operation and tell you honestly whether it's worth pursuing.</p>
     <div class="cta-strip-actions">
       <a href="contact.html" class="btn-primary">Book a Free Discovery Call</a>
       <a href="packages.html" class="btn-secondary">View Packages</a>
@@ -907,44 +149,37 @@
 </section>
 
 <script>
-// ── CATEGORY FILTER ──
 const filterBtns = document.querySelectorAll('.filter-btn');
-const postCards = document.querySelectorAll('.post-card');
-const noResults = document.getElementById('noResults');
 const postCount = document.getElementById('post-count');
+const noResults = document.getElementById('noResults');
+
+function getVisibleCards() {
+  return Array.from(document.querySelectorAll('.post-card')).filter(c => c.style.display !== 'none');
+}
 
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     const filter = btn.dataset.filter;
-
-    // Update active state
     filterBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-
-    // Filter cards
     let visible = 0;
-    postCards.forEach(card => {
+    getVisibleCards().forEach(card => {
       const match = filter === 'all' || card.dataset.category === filter;
       card.classList.toggle('hidden', !match);
       if (match) visible++;
     });
-
-    // Update count
     postCount.textContent = visible + (visible === 1 ? ' article' : ' articles');
-
-    // Show/hide no results
     noResults.style.display = visible === 0 ? 'block' : 'none';
   });
 });
 
-// ── EMAIL NOTIFY ──
+const initialCount = getVisibleCards().length;
+postCount.textContent = initialCount + (initialCount === 1 ? ' article' : ' articles');
+
 function subscribeNotify() {
   const email = document.getElementById('notifyEmail').value.trim();
-  if (!email || !email.includes('@')) {
-    alert('Please enter a valid email address.');
-    return;
-  }
-  document.querySelector('.notify-form').innerHTML = '<p style="color:var(--cyan);font-family:\'Syne\',sans-serif;font-weight:600;font-size:0.95rem;">✓ You\'re on the list — we\'ll be in touch when new posts go live.</p>';
+  if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+  document.querySelector('.notify-form').innerHTML = '<p style="color:var(--cyan);font-family:\'Syne\',sans-serif;font-weight:600;font-size:0.95rem;">You\'re on the list — we\'ll be in touch when new posts go live.</p>';
 }
 </script>
 

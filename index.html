@@ -3,284 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NextLogicAI Consulting — AI Integration for Alberta SMBs</title>
+<title>NextLogicAI Consulting — AI Integration for Small &amp; Mid-Sized Businesses</title>
+<meta name="description" content="NextLogicAI helps small and mid-sized businesses build, deploy, and maintain AI tools that save time, reduce errors, and grow revenue. Practical AI consulting — no hype, just results.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.nextlogic-ai.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nextlogic-ai.com/">
+<meta property="og:title" content="NextLogicAI Consulting — AI Integration for Small &amp; Mid-Sized Businesses">
+<meta property="og:description" content="NextLogicAI helps small and mid-sized businesses build, deploy, and maintain AI tools that save time, reduce errors, and grow revenue.">
+<meta property="og:image" content="https://www.nextlogic-ai.com/og-image.jpg">
+<meta property="og:site_name" content="NextLogicAI Consulting">
+<meta property="og:locale" content="en_CA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NextLogicAI Consulting — AI Integration for Small &amp; Mid-Sized Businesses">
+<meta name="twitter:description" content="Practical AI consulting for SMBs. We build, deploy, and maintain AI tools that save time and grow revenue.">
+<meta name="twitter:image" content="https://www.nextlogic-ai.com/og-image.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.nextlogic-ai.com/#organization","name":"NextLogicAI Consulting","url":"https://www.nextlogic-ai.com","logo":"https://www.nextlogic-ai.com/logo.png","email":"hello@nextlogicai.com"},{"@type":"WebSite","@id":"https://www.nextlogic-ai.com/#website","url":"https://www.nextlogic-ai.com","name":"NextLogicAI Consulting","publisher":{"@id":"https://www.nextlogic-ai.com/#organization"}}]}
+</script>
 <link rel="stylesheet" href="style.css">
-<style>
-/* ── HOME-SPECIFIC ── */
-#hero {
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 8rem 4rem 5rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
-
-.hero-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: rgba(124,58,237,0.15);
-  border: 1px solid rgba(124,58,237,0.35);
-  color: var(--violet-light);
-  padding: 0.35rem 1rem;
-  border-radius: 100px;
-  font-family: 'Syne', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 1.8rem;
-  animation: fadeUp 0.8s ease both;
-}
-.hero-label::before {
-  content: '';
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--cyan);
-  box-shadow: 0 0 6px var(--cyan);
-  animation: blink 2s infinite;
-}
-@keyframes blink { 0%,100%{opacity:1}50%{opacity:0.3} }
-
-#hero h1 {
-  font-size: clamp(2.8rem, 5.5vw, 5rem);
-  font-weight: 800;
-  line-height: 1.06;
-  letter-spacing: -0.03em;
-  margin-bottom: 1.6rem;
-  animation: fadeUp 0.8s 0.1s ease both;
-}
-
-.hero-sub {
-  font-size: 1.15rem;
-  color: var(--muted);
-  max-width: 560px;
-  line-height: 1.75;
-  font-weight: 300;
-  margin-bottom: 2.8rem;
-  animation: fadeUp 0.8s 0.2s ease both;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  animation: fadeUp 0.8s 0.3s ease both;
-}
-
-@keyframes fadeUp { from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)} }
-
-.hero-stat-row {
-  display: flex;
-  gap: 3rem;
-  margin-top: 4rem;
-  padding-top: 2.5rem;
-  border-top: 1px solid var(--border);
-  animation: fadeUp 0.8s 0.4s ease both;
-  flex-wrap: wrap;
-}
-.hero-stat { display: flex; flex-direction: column; gap: 0.25rem; }
-.hero-stat strong {
-  font-family: 'Syne', sans-serif;
-  font-size: 1.8rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--white), var(--cyan));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: -0.03em;
-}
-.hero-stat span { font-size: 0.82rem; color: var(--muted); }
-
-.grid-lines {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(124,58,237,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(124,58,237,0.04) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
-
-/* ── INTRO STRIP ── */
-#intro {
-  background: var(--navy-mid);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 5rem 4rem;
-}
-.intro-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 3rem;
-}
-.intro-item { display: flex; flex-direction: column; gap: 0.8rem; }
-.intro-item-num {
-  font-family: 'Syne', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--violet-light), var(--cyan));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: -0.04em;
-  line-height: 1;
-}
-.intro-item h3 { font-size: 1rem; font-weight: 700; margin: 0; }
-.intro-item p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; font-weight: 300; }
-
-/* ── PROBLEM ── */
-#problem { max-width: 1200px; margin: 0 auto; }
-.problem-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: center;
-}
-.problem-pains {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.pain-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  background: var(--navy-light);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.2rem 1.4rem;
-  transition: border-color 0.25s;
-}
-.pain-item:hover { border-color: rgba(124,58,237,0.4); }
-.pain-icon {
-  width: 36px; height: 36px;
-  border-radius: 8px;
-  background: rgba(124,58,237,0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  flex-shrink: 0;
-}
-.pain-item p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; font-weight: 300; padding-top: 0.15rem; }
-.pain-item strong { display: block; font-size: 0.9rem; font-weight: 600; color: var(--white); margin-bottom: 0.2rem; }
-
-/* ── INDUSTRIES ── */
-#industries {
-  background: var(--navy-mid);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-.industries-inner { max-width: 1200px; margin: 0 auto; }
-.industry-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.2rem;
-  margin-top: 3rem;
-}
-.industry-card {
-  background: var(--navy);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 1.8rem 1.6rem;
-  transition: border-color 0.25s, transform 0.25s;
-}
-.industry-card:hover { border-color: rgba(6,214,245,0.3); transform: translateY(-3px); }
-.industry-icon { font-size: 1.6rem; margin-bottom: 1rem; }
-.industry-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.6rem; }
-.industry-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; }
-.industry-card ul li {
-  font-size: 0.8rem;
-  color: var(--muted);
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-weight: 300;
-}
-.industry-card ul li::before {
-  content: '';
-  width: 4px; height: 4px;
-  border-radius: 50%;
-  background: var(--cyan);
-  flex-shrink: 0;
-}
-
-/* ── PROCESS PREVIEW ── */
-#process-preview { max-width: 1200px; margin: 0 auto; }
-.steps-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  overflow: hidden;
-  margin-top: 3rem;
-}
-.step-mini {
-  background: var(--navy);
-  padding: 2rem;
-  transition: background 0.3s;
-}
-.step-mini:hover { background: var(--navy-light); }
-.step-mini-num {
-  font-family: 'Syne', sans-serif;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: var(--violet-light);
-  opacity: 0.7;
-  margin-bottom: 1rem;
-}
-.step-mini h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; }
-.step-mini p { font-size: 0.84rem; color: var(--muted); line-height: 1.6; font-weight: 300; }
-
-/* ── RESPONSIVE ── */
-@media (max-width: 1024px) {
-  .industry-grid { grid-template-columns: repeat(2, 1fr); }
-  .steps-row { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 768px) {
-  #hero { padding: 7rem 1.25rem 3.5rem; }
-  #hero h1 { font-size: clamp(2.2rem, 9vw, 3.2rem); }
-  .hero-sub { font-size: 1rem; }
-  .hero-actions { flex-direction: column; align-items: stretch; }
-  .hero-actions .btn-primary,
-  .hero-actions .btn-secondary { width: 100%; text-align: center; }
-  .hero-stat-row { gap: 1.5rem; margin-top: 2.5rem; display: grid; grid-template-columns: 1fr 1fr; }
-
-  #intro { padding: 3.5rem 1.25rem; }
-  .intro-inner { grid-template-columns: 1fr; gap: 2rem; }
-
-  #problem { padding: 3.5rem 1.25rem; }
-  .problem-grid { grid-template-columns: 1fr; gap: 2rem; }
-
-  #industries { padding: 3.5rem 1.25rem; }
-  .industry-grid { grid-template-columns: 1fr 1fr; }
-
-  #process-preview { padding: 3.5rem 1.25rem; }
-  .steps-row { grid-template-columns: 1fr; }
-
-  /* CTA section padding fix */
-  section[style*="padding:5rem 4rem"] { padding: 3.5rem 1.25rem !important; }
-}
-
-@media (max-width: 480px) {
-  .industry-grid { grid-template-columns: 1fr; }
-}
-</style>
 </head>
 <body>
 <script src="shared.js"></script>
 
-<!-- HERO -->
 <section id="hero">
   <div style="position:absolute;inset:0;pointer-events:none;">
     <div class="grid-lines"></div>
@@ -288,9 +33,9 @@
     <div class="orb orb-2"></div>
   </div>
   <div class="hero-inner">
-    <div class="hero-label">Alberta's AI Integration Partner</div>
+    <div class="hero-label">Your AI Integration Partner</div>
     <h1>AI that works inside<br><span class="accent-v">your</span> business —<br>not just <span class="accent-c">around</span> it.</h1>
-    <p class="hero-sub">NextLogicAI helps small and mid-sized businesses across Alberta build, deploy, and maintain AI tools that save time, reduce errors, and grow revenue. We handle the complexity. You see the results.</p>
+    <p class="hero-sub">NextLogicAI helps small and mid-sized businesses build, deploy, and maintain AI tools that save time, reduce errors, and grow revenue. We handle the complexity. You see the results.</p>
     <div class="hero-actions">
       <a href="contact.html" class="btn-primary">Book a Free Discovery Call</a>
       <a href="services.html" class="btn-secondary">See What We Build →</a>
@@ -304,28 +49,14 @@
   </div>
 </section>
 
-<!-- INTRO STRIP -->
 <section id="intro">
   <div class="intro-inner reveal">
-    <div class="intro-item">
-      <div class="intro-item-num">01</div>
-      <h3>We listen first</h3>
-      <p>Every engagement starts with a structured discovery call — not a pitch. We spend our first session understanding your business before suggesting a single tool.</p>
-    </div>
-    <div class="intro-item">
-      <div class="intro-item-num">02</div>
-      <h3>We build what fits</h3>
-      <p>No bloated solutions, no unnecessary complexity. We recommend the simplest system your team can actually use and maintain — and we scope to your reality.</p>
-    </div>
-    <div class="intro-item">
-      <div class="intro-item-num">03</div>
-      <h3>We stay after launch</h3>
-      <p>Retainer tiers mean your AI system keeps improving after go-live. We monitor, optimize, and expand as your business grows — we don't disappear at handoff.</p>
-    </div>
+    <div class="intro-item"><div class="intro-item-num">01</div><h3>We listen first</h3><p>Every engagement starts with a structured discovery call — not a pitch. We spend our first session understanding your business before suggesting a single tool.</p></div>
+    <div class="intro-item"><div class="intro-item-num">02</div><h3>We build what fits</h3><p>No bloated solutions, no unnecessary complexity. We recommend the simplest system your team can actually use and maintain — and we scope to your reality.</p></div>
+    <div class="intro-item"><div class="intro-item-num">03</div><h3>We stay after launch</h3><p>Retainer tiers mean your AI system keeps improving after go-live. We monitor, optimize, and expand as your business grows — we don't disappear at handoff.</p></div>
   </div>
 </section>
 
-<!-- PROBLEM -->
 <section id="problem">
   <div class="problem-grid reveal">
     <div>
@@ -335,75 +66,26 @@
       <a href="how-it-works.html" class="btn-secondary">See How We Fix It →</a>
     </div>
     <div class="problem-pains">
-      <div class="pain-item">
-        <div class="pain-icon">📋</div>
-        <div><strong>Hours lost to manual admin</strong><p>Booking confirmations, follow-up emails, data entry, invoice reminders — repetitive tasks that eat your team's day.</p></div>
-      </div>
-      <div class="pain-item">
-        <div class="pain-icon">💸</div>
-        <div><strong>Revenue leaking after hours</strong><p>Leads that come in at 9pm, booking requests that go unanswered, questions that never get a response. AI doesn't clock out.</p></div>
-      </div>
-      <div class="pain-item">
-        <div class="pain-icon">🔁</div>
-        <div><strong>The same questions, every day</strong><p>Your team answering the same FAQs, writing the same emails, explaining the same process — to every single new client.</p></div>
-      </div>
-      <div class="pain-item">
-        <div class="pain-icon">📉</div>
-        <div><strong>Errors from manual processes</strong><p>Copy-paste mistakes, missed follow-ups, double-bookings. Manual work at volume produces errors. Automation doesn't.</p></div>
-      </div>
+      <div class="pain-item"><div class="pain-icon">📋</div><div><strong>Hours lost to manual admin</strong><p>Booking confirmations, follow-up emails, data entry, invoice reminders — repetitive tasks that eat your team's day.</p></div></div>
+      <div class="pain-item"><div class="pain-icon">💸</div><div><strong>Revenue leaking after hours</strong><p>Leads that come in at 9pm, booking requests that go unanswered, questions that never get a response. AI doesn't clock out.</p></div></div>
+      <div class="pain-item"><div class="pain-icon">🔁</div><div><strong>The same questions, every day</strong><p>Your team answering the same FAQs, writing the same emails, explaining the same process — to every single new client.</p></div></div>
+      <div class="pain-item"><div class="pain-icon">📉</div><div><strong>Errors from manual processes</strong><p>Copy-paste mistakes, missed follow-ups, double-bookings. Manual work at volume produces errors. Automation doesn't.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- INDUSTRIES -->
 <section id="industries">
   <div class="industries-inner">
     <div class="reveal">
       <div class="section-label">Industries We Serve</div>
       <h2 class="section-title">AI built for businesses like yours</h2>
-      <p class="section-desc">We specialize in practical AI solutions for Alberta's small and mid-sized businesses across a wide range of industries.</p>
+      <p class="section-desc">We specialize in practical AI solutions for small and mid-sized businesses across a wide range of industries worldwide.</p>
     </div>
     <div class="industry-grid reveal">
-      <div class="industry-card">
-        <div class="industry-icon">🔧</div>
-        <h3>Trades &amp; Field Services</h3>
-        <ul>
-          <li>AI Estimate Generator</li>
-          <li>Scheduling Assistant</li>
-          <li>Invoice Follow-Up Bot</li>
-          <li>Job Summary Generator</li>
-        </ul>
-      </div>
-      <div class="industry-card">
-        <div class="industry-icon">✂️</div>
-        <h3>Salons &amp; Hospitality</h3>
-        <ul>
-          <li>AI Booking Assistant</li>
-          <li>Review Response Generator</li>
-          <li>Client Rebooking Campaigns</li>
-          <li>Service Description Writer</li>
-        </ul>
-      </div>
-      <div class="industry-card">
-        <div class="industry-icon">🏠</div>
-        <h3>Real Estate &amp; Professional</h3>
-        <ul>
-          <li>Listing Description Writer</li>
-          <li>Lead Qualifier Chatbot</li>
-          <li>Document Summarizer</li>
-          <li>FAQ Knowledge Base Bot</li>
-        </ul>
-      </div>
-      <div class="industry-card">
-        <div class="industry-icon">🛍️</div>
-        <h3>Retail &amp; E-Commerce</h3>
-        <ul>
-          <li>Product Description Generator</li>
-          <li>Customer Support Bot</li>
-          <li>Abandoned Cart Recovery</li>
-          <li>Inventory Alert Summarizer</li>
-        </ul>
-      </div>
+      <div class="industry-card"><div class="industry-icon">🔧</div><h3>Trades &amp; Field Services</h3><ul><li>AI Estimate Generator</li><li>Scheduling Assistant</li><li>Invoice Follow-Up Bot</li><li>Job Summary Generator</li></ul></div>
+      <div class="industry-card"><div class="industry-icon">✂️</div><h3>Salons &amp; Hospitality</h3><ul><li>AI Booking Assistant</li><li>Review Response Generator</li><li>Client Rebooking Campaigns</li><li>Service Description Writer</li></ul></div>
+      <div class="industry-card"><div class="industry-icon">🏠</div><h3>Real Estate &amp; Professional</h3><ul><li>Listing Description Writer</li><li>Lead Qualifier Chatbot</li><li>Document Summarizer</li><li>FAQ Knowledge Base Bot</li></ul></div>
+      <div class="industry-card"><div class="industry-icon">🛍️</div><h3>Retail &amp; E-Commerce</h3><ul><li>Product Description Generator</li><li>Customer Support Bot</li><li>Abandoned Cart Recovery</li><li>Inventory Alert Summarizer</li></ul></div>
     </div>
     <div style="text-align:center;margin-top:3rem;" class="reveal">
       <a href="services.html" class="btn-secondary">Explore All Services →</a>
@@ -411,7 +93,6 @@
   </div>
 </section>
 
-<!-- PROCESS PREVIEW -->
 <section id="process-preview">
   <div class="reveal">
     <div class="section-label">How It Works</div>
@@ -431,7 +112,6 @@
   </div>
 </section>
 
-<!-- CTA STRIP -->
 <section class="cta-section">
   <div class="cta-strip reveal" style="max-width:1200px;margin:0 auto;">
     <h2>Ready to see what AI can do for your business?</h2>
