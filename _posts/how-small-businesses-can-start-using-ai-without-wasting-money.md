@@ -1,5 +1,5 @@
 ---
-title: How Small Businesses Can Start Using AI Without Wasting Money
+title: How Small Businesses Can Start Using AI
 date: 2025-06-03T13:05:00.000-06:00
 category: ai-small-business
 readtime: 8 Min
