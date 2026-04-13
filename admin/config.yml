@@ -1,0 +1,32 @@
+backend:
+  name: github
+  repo: nextlogicai-consult/Main
+  branch: main
+  base_url: https://netlify-cms-github-oauth-provider-pink-delta.vercel.app
+
+media_folder: "images/blog"
+public_folder: "/images/blog"
+
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "AI for Small Business", value: "ai-small-business" }
+          - { label: "Workflow Automation", value: "workflow-automation" }
+          - { label: "AI Tools & Selection", value: "ai-tools" }
+          - { label: "Industry Guides", value: "industry-guides" }
+          - { label: "ROI & Strategy", value: "roi-strategy" }
+          - { label: "Training & Adoption", value: "training-adoption" }
+      - { label: "Read Time (e.g. 7 min)", name: "readtime", widget: "string" }
+      - { label: "Summary", name: "description", widget: "text" }
+      - { label: "Featured Post?", name: "featured", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown" }
