@@ -61,27 +61,12 @@ nav {
   text-decoration: none;
 }
 
-.logo-mark {
-  width: 32px; height: 32px;
-  background: linear-gradient(135deg, var(--violet), var(--cyan));
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Syne', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: white;
-  flex-shrink: 0;
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
-.logo-text {
-  font-family: 'Syne', sans-serif;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--white);
-  letter-spacing: -0.02em;
-}
 .logo-text span { color: var(--cyan); }
 
 .nav-links {
