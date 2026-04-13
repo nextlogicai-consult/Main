@@ -18,8 +18,8 @@ function injectNav(activePage) {
 
   document.body.insertAdjacentHTML('afterbegin', `
     <nav>
-      <a href="index.html" class="nav-logo" style="position:absolute;left:50%;transform:translateX(-50%);">
-        <img src="logo.png" alt="NextLogicAI Consulting" class="nav-logo-img" style="height:50px;width:auto;">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="NextLogicAI Consulting" class="nav-logo-img">
       </a>
       <ul class="nav-links">
         ${links}
