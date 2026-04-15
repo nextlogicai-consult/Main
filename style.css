@@ -46,10 +46,6 @@ body::before {
   opacity: 0.5;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> refs/remotes/origin/main
 /* ════════════════════════════════════════════════
    NAV
    ════════════════════════════════════════════════ */
@@ -65,20 +61,35 @@ nav {
   justify-self: center;
 }
 
-.nav-links {
+.nav-links-left {
+  grid-column: 1;
+  justify-self: start;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links-right {
   grid-column: 3;
   justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .nav-logo-img {
   height: 85px;
-  width: 50%;
-  display: center;
+  width: auto;
+  display: block;
 }
 
-nav-links-left a,
+.nav-links-left a,
 .nav-links-right a {
   color: var(--muted);
   text-decoration: none;
@@ -92,15 +103,6 @@ nav-links-left a,
 .nav-links-right a:hover { color: var(--white); }
 .nav-links-left a.active,
 .nav-links-right a.active { color: var(--white); }
-
-.nav-cta {
-  background: linear-gradient(135deg, var(--violet), #5b21b6) !important;
-  color: white !important;
-  padding: 0.55rem 1.4rem;
-  border-radius: 6px;
-  transition: opacity 0.2s, transform 0.2s !important;
-}
-.nav-cta:hover { opacity: 0.88; transform: translateY(-1px); }
 
 /* ── HAMBURGER ── */
 .nav-hamburger {

@@ -2,7 +2,7 @@ backend:
   name: github
   repo: nextlogicai-consult/Main
   branch: main
-  base_url: https://www.nextlogic-ai.com/api/callback
+  base_url: https://decap-oauth.your-subdomain.workers.dev
   auth_endpoint: /auth
   
 media_folder: "images/blog"
