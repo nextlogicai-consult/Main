@@ -2,19 +2,6 @@
 // Usage: include this script, then call injectNav('pagename') and injectFooter()
 
 function injectNav(activePage) {
-<<<<<<< HEAD
-  const pages = [
-    { id: 'index',        label: 'Home',         href: 'index.html' },
-    { id: 'how-it-works', label: 'How It Works', href: 'how-it-works.html' },
-    { id: 'services',     label: 'Services',     href: 'services.html' },
-    { id: 'packages',     label: 'Packages',     href: 'packages.html' },
-    { id: 'blog',         label: 'Blog',         href: 'blog.html' },
-    { id: 'contact',      label: 'Contact',      href: 'contact.html' },
-  ];
-
-  const links = pages
-    .filter(p => p.id !== 'contact')
-=======
   const leftPages = [
     { id: 'index',        label: 'Home',         href: 'index.html' },
     { id: 'how-it-works', label: 'How It Works', href: 'how-it-works.html' },
@@ -30,19 +17,11 @@ function injectNav(activePage) {
     .join('');
 
   const rightLinks = rightPages
->>>>>>> refs/remotes/origin/main
     .map(p => `<li><a href="${p.href}"${activePage === p.id ? ' class="active"' : ''}>${p.label}</a></li>`)
     .join('');
 
   document.body.insertAdjacentHTML('afterbegin', `
     <nav>
-<<<<<<< HEAD
-      <a href="index.html" class="nav-logo">
-        <img src="logo.png" alt="NextLogicAI Consulting" class="nav-logo-img">
-      </a>
-      <ul class="nav-links">
-        ${links}
-=======
       <ul class="nav-links-left">
         ${leftLinks}
       </ul>
@@ -51,7 +30,6 @@ function injectNav(activePage) {
       </a>
       <ul class="nav-links-right">
         ${rightLinks}
->>>>>>> refs/remotes/origin/main
         <li><a href="contact.html" class="nav-cta${activePage === 'contact' ? ' active' : ''}">Book a Discovery Call</a></li>
       </ul>
       <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
@@ -59,16 +37,12 @@ function injectNav(activePage) {
       </button>
     </nav>
     <div class="mobile-menu" id="mobileMenu">
-<<<<<<< HEAD
-      ${pages.map(p => `<a href="${p.href}" class="mobile-nav-link${p.id === 'contact' ? ' mobile-cta' : ''}">${p.label}</a>`).join('')}
-=======
       <a href="index.html" class="mobile-nav-link${activePage === 'index' ? ' active' : ''}">Home</a>
       <a href="how-it-works.html" class="mobile-nav-link${activePage === 'how-it-works' ? ' active' : ''}">How It Works</a>
       <a href="services.html" class="mobile-nav-link${activePage === 'services' ? ' active' : ''}">Services</a>
       <a href="packages.html" class="mobile-nav-link${activePage === 'packages' ? ' active' : ''}">Packages</a>
       <a href="blog.html" class="mobile-nav-link${activePage === 'blog' ? ' active' : ''}">Blog</a>
       <a href="contact.html" class="mobile-nav-link mobile-cta">Book a Discovery Call</a>
->>>>>>> refs/remotes/origin/main
     </div>
   `);
 
@@ -117,8 +91,4 @@ function injectFooter() {
       </div>
     </footer>
   `);
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> refs/remotes/origin/main
