@@ -34,8 +34,14 @@ export default async function handler(req, res) {
   res.send(`<script>
     if (window.opener) {
       window.opener.postMessage(
-        'authorization:github:success:{"token":"${data.access_token}","provider":"github"}',
-        '*'
+        {
+          type: "authorization:github",
+          data: {
+            token: "${data.access_token}",
+            provider: "github"
+          }
+        },
+        "https://www.nextlogic-ai.com"
       );
     }
     window.close();
