@@ -3,156 +3,805 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Services — Chatbots, Workflow Automation &amp; More | NextLogicAI</title>
-<meta name="description" content="NextLogicAI builds AI chatbots, workflow automations, document AI, and data processing tools for small businesses. See all services and industry use cases.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.nextlogic-ai.com/services.html">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.nextlogic-ai.com/services.html">
-<meta property="og:title" content="AI Services — Chatbots, Workflow Automation &amp; More | NextLogicAI">
-<meta property="og:description" content="We build AI chatbots, workflow automations, document AI, and data processing tools for small businesses. Practical solutions, no hype.">
-<meta property="og:image" content="https://www.nextlogic-ai.com/og-image.jpg">
-<meta property="og:site_name" content="NextLogicAI Consulting">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="AI Services — Chatbots, Workflow Automation &amp; More | NextLogicAI">
-<meta name="twitter:description" content="AI chatbots, workflow automations, document AI, and data processing for small businesses.">
-<meta name="twitter:image" content="https://www.nextlogic-ai.com/og-image.jpg">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","name":"AI Services","url":"https://www.nextlogic-ai.com/services.html","description":"AI chatbots, workflow automations, document AI, and data processing for small and mid-sized businesses.","isPartOf":{"@id":"https://www.nextlogic-ai.com/#website"}}
-</script>
-<link rel="stylesheet" href="style.css">
+<title>NextLogicAI — Practical AI for Real Business</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0b0f1e;
+    --navy-mid: #111827;
+    --navy-card: #141c2e;
+    --navy-border: #1e2d4a;
+    --violet: #7c3aed;
+    --violet-light: #a78bfa;
+    --cyan: #06b6d4;
+    --cyan-light: #67e8f9;
+    --white: #f0f4ff;
+    --muted: #8899bb;
+    --success: #10b981;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Syne', sans-serif;
+    line-height: 1.15;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 72px 24px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: 50%;
+    transform: translateX(-50%);
+    width: 500px; height: 500px;
+    background: radial-gradient(ellipse, rgba(124,58,237,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    background: rgba(124,58,237,0.15);
+    border: 1px solid rgba(124,58,237,0.4);
+    color: var(--violet-light);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: clamp(32px, 8vw, 48px);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+
+  .hero h1 span {
+    background: linear-gradient(135deg, var(--violet-light), var(--cyan-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    color: var(--muted);
+    max-width: 340px;
+    margin: 0 auto 32px;
+    font-weight: 300;
+  }
+
+  /* DIFFERENTIATOR BANNER */
+  .diff-banner {
+    margin: 0 16px 48px;
+    background: linear-gradient(135deg, rgba(124,58,237,0.12), rgba(6,182,212,0.08));
+    border: 1px solid var(--navy-border);
+    border-left: 3px solid var(--violet);
+    border-radius: 12px;
+    padding: 20px 20px;
+  }
+
+  .diff-banner h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .diff-banner p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .diff-banner p strong {
+    color: var(--cyan-light);
+    font-weight: 500;
+  }
+
+  /* SECTION LABEL */
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--violet-light);
+    padding: 0 24px;
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--white);
+    padding: 0 24px;
+    margin-bottom: 6px;
+  }
+
+  .section-desc {
+    font-size: 14px;
+    color: var(--muted);
+    padding: 0 24px;
+    margin-bottom: 24px;
+    font-weight: 300;
+  }
+
+  /* PROBLEM CARDS */
+  .cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 16px;
+    margin-bottom: 56px;
+  }
+
+  .card {
+    background: var(--navy-card);
+    border: 1px solid var(--navy-border);
+    border-radius: 14px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+
+  .card:active {
+    border-color: var(--violet);
+  }
+
+  .card-accent {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+  }
+
+  .card-accent.violet { background: linear-gradient(90deg, var(--violet), transparent); }
+  .card-accent.cyan   { background: linear-gradient(90deg, var(--cyan), transparent); }
+  .card-accent.mixed  { background: linear-gradient(90deg, var(--violet), var(--cyan)); }
+
+  .card-icon {
+    width: 38px; height: 38px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  .card-icon.v  { background: rgba(124,58,237,0.15); }
+  .card-icon.c  { background: rgba(6,182,212,0.12); }
+  .card-icon.m  { background: rgba(124,58,237,0.10); border: 1px solid rgba(6,182,212,0.2); }
+
+  .card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .card p {
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .tag {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 9px;
+    border-radius: 100px;
+    border: 1px solid var(--navy-border);
+    color: var(--muted);
+  }
+
+  .tag.v { border-color: rgba(124,58,237,0.4); color: var(--violet-light); }
+  .tag.c { border-color: rgba(6,182,212,0.35); color: var(--cyan-light); }
+
+  /* LOCAL LLM CALLOUT */
+  .llm-callout {
+    margin: 0 16px 56px;
+    background: linear-gradient(145deg, #0f1a30, #111827);
+    border: 1px solid var(--navy-border);
+    border-radius: 16px;
+    padding: 24px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .llm-callout::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; right: -40px;
+    width: 160px; height: 160px;
+    background: radial-gradient(circle, rgba(6,182,212,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .llm-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(16,185,129,0.12);
+    border: 1px solid rgba(16,185,129,0.3);
+    color: #34d399;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 100px;
+    margin-bottom: 14px;
+  }
+
+  .llm-badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: #34d399;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .llm-callout h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+
+  .llm-callout p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.65;
+    margin-bottom: 18px;
+  }
+
+  .llm-callout p strong {
+    color: var(--cyan-light);
+    font-weight: 500;
+  }
+
+  .llm-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .llm-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .llm-features li .check {
+    flex-shrink: 0;
+    width: 18px; height: 18px;
+    background: rgba(16,185,129,0.15);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px;
+    color: #34d399;
+    margin-top: 1px;
+  }
+
+  .llm-features li strong {
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  /* MODEL TABLE */
+  .model-section {
+    padding: 0 16px;
+    margin-bottom: 56px;
+  }
+
+  .model-note {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 16px;
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  .model-table {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .model-row {
+    background: var(--navy-card);
+    border: 1px solid var(--navy-border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .model-row-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .model-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  .model-badge {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 100px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .model-badge.local   { background: rgba(16,185,129,0.12); color: #34d399; border: 1px solid rgba(16,185,129,0.3); }
+  .model-badge.cloud   { background: rgba(124,58,237,0.12); color: var(--violet-light); border: 1px solid rgba(124,58,237,0.3); }
+  .model-badge.hybrid  { background: rgba(6,182,212,0.10); color: var(--cyan-light); border: 1px solid rgba(6,182,212,0.25); }
+
+  .model-use {
+    font-size: 12.5px;
+    color: var(--muted);
+    font-weight: 300;
+  }
+
+  /* CONNECT SECTION */
+  .connect-section {
+    padding: 0 16px;
+    margin-bottom: 56px;
+  }
+
+  .connect-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .connect-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--navy-card);
+    border: 1px solid var(--navy-border);
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+
+  .connect-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .connect-dot.v { background: var(--violet); box-shadow: 0 0 8px var(--violet); }
+  .connect-dot.c { background: var(--cyan); box-shadow: 0 0 8px var(--cyan); }
+  .connect-dot.g { background: #34d399; box-shadow: 0 0 8px #34d399; }
+
+  .connect-text {
+    font-size: 13.5px;
+    color: var(--muted);
+    font-weight: 300;
+  }
+
+  .connect-text strong {
+    color: var(--white);
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+
+  /* USE CASES */
+  .usecases-section {
+    padding: 0 16px;
+    margin-bottom: 56px;
+  }
+
+  .industry-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .industry-item {
+    background: var(--navy-card);
+    border: 1px solid var(--navy-border);
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+
+  .industry-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+
+  .industry-icon {
+    font-size: 16px;
+  }
+
+  .industry-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  .industry-use {
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  /* CTA */
+  .cta-section {
+    margin: 0 16px 64px;
+    background: linear-gradient(145deg, rgba(124,58,237,0.12), rgba(6,182,212,0.06));
+    border: 1px solid var(--navy-border);
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: 50%;
+    transform: translateX(-50%);
+    width: 300px; height: 200px;
+    background: radial-gradient(ellipse, rgba(124,58,237,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cta-section h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+
+  .cta-section p {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--violet), #6d28d9);
+    color: #fff;
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 14px 28px;
+    border-radius: 100px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    box-shadow: 0 4px 20px rgba(124,58,237,0.4);
+  }
+
+  .section-gap { margin-bottom: 48px; }
+</style>
 </head>
 <body>
-<script src="shared.js"></script>
 
-<div class="page-hero">
-  <div class="page-hero-bg">
-    <div class="grid-lines"></div>
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-  </div>
-  <div class="page-hero-inner">
-    <div class="page-hero-label">What We Build</div>
-    <h1>Practical AI for<br><span class="accent-v">real</span> business <span class="accent-c">problems</span></h1>
-    <p>We don't build AI for the sake of it. Every system we deploy solves a specific, measurable pain point in your operations — and we recommend the simplest solution that gets the job done.</p>
+<!-- HERO -->
+<section class="hero">
+  <div class="eyebrow">NextLogicAI Consulting</div>
+  <h1>Practical AI for<br><span>real business</span></h1>
+  <p class="hero-sub">No subscriptions to generic tools. AI that's built specifically for your business, your data, and the way you actually work.</p>
+</section>
+
+<!-- DIFFERENTIATOR BANNER -->
+<div class="diff-banner">
+  <h3>This isn't ChatGPT with a different logo.</h3>
+  <p>I build <strong>locally-deployed AI models</strong> configured specifically for your business. Your data stays on your systems. Your AI knows your products, your pricing, your tone, because I set it up that way from the start.</p>
+</div>
+
+<!-- FOUR PROBLEM AREAS -->
+<div class="section-gap">
+  <p class="section-label">What we solve</p>
+  <h2 class="section-title">Four types of business problems</h2>
+  <p class="section-desc">Before I build anything, I figure out where AI will actually move the needle for your business. Every project starts there.</p>
+
+  <div class="cards-grid">
+
+    <div class="card">
+      <div class="card-accent violet"></div>
+      <div class="card-icon v">💬</div>
+      <h3>Customer-Facing Assistants</h3>
+      <p>An AI that knows your services, your pricing, and how you talk to customers. It handles questions, books appointments, qualifies leads, and responds the way you would. It works nights and weekends without adding headcount.</p>
+      <div class="card-tags">
+        <span class="tag v">Local LLM</span>
+        <span class="tag">Your tone</span>
+        <span class="tag">Your data</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-accent cyan"></div>
+      <div class="card-icon c">⚙️</div>
+      <h3>Workflow Automation</h3>
+      <p>The tasks that eat your week, quoting, intake, follow-ups, status updates, get handled automatically. I connect AI to the tools your team already uses so nothing changes for them except the time they get back.</p>
+      <div class="card-tags">
+        <span class="tag c">Automation</span>
+        <span class="tag">Internal tools</span>
+        <span class="tag">Time savings</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-accent mixed"></div>
+      <div class="card-icon m">📄</div>
+      <h3>Document &amp; Content AI</h3>
+      <p>Proposals, reports, marketing copy, and client emails that already sound like your brand. I train the model on your existing content so the output is actually usable, not a first draft that needs a full rewrite.</p>
+      <div class="card-tags">
+        <span class="tag v">Brand voice</span>
+        <span class="tag c">Content</span>
+        <span class="tag">Proposals</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-accent cyan"></div>
+      <div class="card-icon c">📊</div>
+      <h3>Data &amp; Reporting AI</h3>
+      <p>Ask questions about your business in plain English and get real answers. No new dashboard to learn, no analyst to hire. Your numbers, your inventory, your performance, explained in a way that's actually useful.</p>
+      <div class="card-tags">
+        <span class="tag c">Analytics</span>
+        <span class="tag">Plain language</span>
+        <span class="tag">Private data</span>
+      </div>
+    </div>
+
   </div>
 </div>
-<hr class="divider">
 
-<section id="service-types">
-  <div class="reveal">
-    <div class="section-label">Service Categories</div>
-    <h2 class="section-title">Four types of AI solutions</h2>
-    <p class="section-desc">Every AI solution we build falls into one of these categories — chosen based on your specific challenge.</p>
-  </div>
-  <div class="service-type-grid reveal">
-    <div class="service-type-card stc-1"><div class="stc-icon">💬</div><h3>AI Chatbots &amp; Assistants</h3><p>Conversational AI embedded in your website, booking system, or internal tools. Available 24/7 to answer questions, qualify leads, handle bookings, and escalate to your team when needed.</p><ul class="stc-examples"><li>Customer-facing booking assistants</li><li>Lead qualification chatbots</li><li>Internal FAQ and knowledge base bots</li><li>After-hours support agents</li></ul></div>
-    <div class="service-type-card stc-2"><div class="stc-icon">⚙️</div><h3>Workflow Automation</h3><p>Connect your existing tools with AI-powered triggers, approvals, and actions. Eliminate hours of manual, repetitive work each week without replacing the systems your team already uses.</p><ul class="stc-examples"><li>Invoice follow-up automation</li><li>Lead routing and CRM updates</li><li>Email drafting and scheduling pipelines</li><li>Supplier price monitoring</li></ul></div>
-    <div class="service-type-card stc-3"><div class="stc-icon">📄</div><h3>Document &amp; Content AI</h3><p>AI that reads, summarizes, drafts, and generates documents — from client-facing reports to SEO product descriptions. Feed it your notes and it produces polished output in seconds.</p><ul class="stc-examples"><li>Listing and product description writers</li><li>Contract and report summarizers</li><li>Review response generators</li><li>Client update email drafters</li></ul></div>
-    <div class="service-type-card stc-4"><div class="stc-icon">📊</div><h3>Data Processing &amp; Reporting</h3><p>AI that processes queues of items on a schedule — invoices, leads, inventory reports — and delivers plain-language briefings or triggered actions. Back-office automation that runs without supervision.</p><ul class="stc-examples"><li>Daily inventory alert summaries</li><li>Batch invoice processing</li><li>Scheduled performance briefings</li><li>Abandoned cart recovery campaigns</li></ul></div>
-  </div>
-</section>
+<!-- LOCAL LLM CALLOUT -->
+<div class="llm-callout">
+  <div class="llm-badge">Local AI Deployment</div>
+  <h3>Your own AI model.<br>Running on your terms.</h3>
+  <p>Most AI consultants hand you a ChatGPT or Claude wrapper and call it a day. Your data goes to a third-party server, you pay per query forever, and the AI still doesn't know anything about your business.</p>
+  <p>I take a different approach. I <strong>deploy local language models directly into your environment.</strong> The AI runs where your data already lives.</p>
+  <ul class="llm-features">
+    <li>
+      <span class="check">✓</span>
+      <span><strong>Your data never leaves your systems.</strong> No sensitive client or business data going to third-party APIs.</span>
+    </li>
+    <li>
+      <span class="check">✓</span>
+      <span><strong>Trained on your actual business.</strong> Your products, services, pricing, tone, and processes baked right in.</span>
+    </li>
+    <li>
+      <span class="check">✓</span>
+      <span><strong>No per-query costs.</strong> One deployment, not a usage meter running in the background.</span>
+    </li>
+    <li>
+      <span class="check">✓</span>
+      <span><strong>Works without an internet connection.</strong> Reliable even when your connection isn't.</span>
+    </li>
+    <li>
+      <span class="check">✓</span>
+      <span><strong>You own it when we're done.</strong> Full documentation, staff training, no platform lock-in.</span>
+    </li>
+  </ul>
+</div>
 
-<section id="ai-models">
-  <div class="ai-inner">
-    <div class="reveal">
-      <div class="section-label">Technology</div>
-      <h2 class="section-title">The right AI model for the job</h2>
-      <p class="section-desc">We don't default to one platform. We select the AI model that best fits your use case, budget, and data privacy requirements.</p>
-    </div>
-    <div class="models-grid reveal">
-      <div class="model-card"><div class="model-name">GPT-4o</div><div class="model-tag best">Best All-Round</div><p>Ideal for complex reasoning, customer-facing chat, document analysis, and content generation. Our default for most client-facing applications.</p></div>
-      <div class="model-card"><div class="model-name">Claude (Anthropic)</div><div class="model-tag long">Long Documents</div><p>Excellent for long-document analysis, nuanced professional writing, and safety-sensitive applications. Strong extended context window.</p></div>
-      <div class="model-card"><div class="model-name">Gemini</div><div class="model-tag multi">Multimodal</div><p>Strong with text, image, and audio together. Best fit for clients already in the Google Workspace ecosystem.</p></div>
-      <div class="model-card"><div class="model-name">Open Source</div><div class="model-tag private">Privacy-First</div><p>Llama, Mistral, and others. Best for clients with strict data privacy requirements or on-premise needs. No per-token API costs post-deployment.</p></div>
-      <div class="model-card"><div class="model-name">Specialist Models</div><div class="model-tag domain">Domain-Specific</div><p>Purpose-built models for legal, medical, or financial industries where fine-tuned accuracy in a regulated field is critical.</p></div>
+<!-- THE RIGHT MODEL -->
+<div class="model-section section-gap">
+  <p class="section-label">The right AI model</p>
+  <h2 class="section-title">We match the model to the job</h2>
+  <p class="model-note">Different problems call for different tools. I pick the right model architecture for your use case and go local-first whenever it makes sense.</p>
+
+  <div class="model-table">
+
+    <div class="model-row">
+      <div class="model-row-top">
+        <span class="model-name">Local Open-Source LLM</span>
+        <span class="model-badge local">Local</span>
+      </div>
+      <span class="model-use">Customer assistants, internal Q&amp;A, document generation. Private, fast, and no ongoing fees once deployed.</span>
     </div>
 
-    <div style="margin-top:4rem;" class="reveal">
-      <div class="section-label">Integration Platforms</div>
-      <h2 class="section-title" style="font-size:clamp(1.4rem,2.5vw,2rem);">How we connect AI to your existing tools</h2>
-      <p class="section-desc" style="margin-bottom:0;">Most AI solutions need to connect to your booking system, CRM, email, or accounting software. We use proven platforms to make those connections.</p>
+    <div class="model-row">
+      <div class="model-row-top">
+        <span class="model-name">Fine-Tuned Domain Model</span>
+        <span class="model-badge local">Local</span>
+      </div>
+      <span class="model-use">Built and trained on your data for specialized outputs like proposals, quoting, and industry-specific language.</span>
     </div>
-    <div class="platforms-grid reveal">
-      <div class="platform-card"><div class="platform-name">Make (Integromat)</div><div class="platform-role">Primary automation platform</div><p>Our default platform for most clients. Visual, reliable, and connects 1,000+ apps. Excellent for SMB workflow automation.</p></div>
-      <div class="platform-card"><div class="platform-name">Zapier</div><div class="platform-role">Simpler automations</div><p>Used when the client already has a Zapier subscription or when the use case is straightforward and Make is overkill.</p></div>
-      <div class="platform-card"><div class="platform-name">n8n</div><div class="platform-role">Self-hosted option</div><p>Open-source automation for clients wanting full control and self-hosted workflows. Requires more technical setup.</p></div>
-      <div class="platform-card"><div class="platform-name">Voiceflow / Botpress</div><div class="platform-role">Chatbot builders</div><p>Purpose-built conversation designers. Used when a visual conversation flow speeds up delivery on chatbot projects.</p></div>
-      <div class="platform-card"><div class="platform-name">Custom Python / API</div><div class="platform-role">When no platform fits</div><p>When no no-code platform supports the required integration, or when performance and flexibility are critical.</p></div>
-      <div class="platform-card"><div class="platform-name">Railway / Render</div><div class="platform-role">Lightweight cloud hosting</div><p>Simple cloud hosting for lightweight custom applications and APIs. Low cost, easy deployment, easy maintenance.</p></div>
-    </div>
-  </div>
-</section>
 
-<section id="by-industry">
-  <div class="reveal">
-    <div class="section-label">By Industry</div>
-    <h2 class="section-title">AI ideas for your specific business</h2>
-    <p class="section-desc">Here are the most common and highest-value AI use cases we've built across the industries we serve. Your discovery call will surface what's right for you.</p>
-  </div>
-  <div class="reveal">
-    <div class="industry-tabs">
-      <button class="ind-tab active" data-panel="trades">🔧 Trades &amp; Field Services</button>
-      <button class="ind-tab" data-panel="salons">✂️ Salons &amp; Hospitality</button>
-      <button class="ind-tab" data-panel="realestate">🏠 Real Estate &amp; Professional</button>
-      <button class="ind-tab" data-panel="retail">🛍️ Retail &amp; E-Commerce</button>
+    <div class="model-row">
+      <div class="model-row-top">
+        <span class="model-name">Retrieval-Augmented AI (RAG)</span>
+        <span class="model-badge hybrid">Hybrid</span>
+      </div>
+      <span class="model-use">Pulls answers directly from your own documents, SOPs, and knowledge base in real time.</span>
     </div>
-    <div id="panel-trades" class="industry-panel active">
-      <div class="use-case-card"><div class="uc-icon">💰</div><h4>AI Estimate Generator</h4><p>Client submits job details via a form; AI generates a draft quote based on your pricing rules — ready for your review in seconds.</p></div>
-      <div class="use-case-card"><div class="uc-icon">📅</div><h4>Scheduling Assistant</h4><p>AI chatbot handles appointment booking, rescheduling, and reminders via SMS or your website — 24 hours a day.</p></div>
-      <div class="use-case-card"><div class="uc-icon">📝</div><h4>Job Summary Generator</h4><p>Technician completes a job; AI generates a polished, client-facing summary report from field notes.</p></div>
-      <div class="use-case-card"><div class="uc-icon">📬</div><h4>Invoice Follow-Up Automation</h4><p>AI drafts and sends follow-up messages for unpaid invoices on a schedule — so nothing slips through.</p></div>
-      <div class="use-case-card"><div class="uc-icon">🔍</div><h4>Supplier Price Monitor</h4><p>AI scans supplier emails or websites and flags price changes against your reference list automatically.</p></div>
-      <div class="use-case-card" style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;background:transparent;border-style:dashed;"><p style="font-size:0.88rem;color:var(--muted);margin-bottom:1rem;font-weight:300;">Don't see your exact use case? Let's talk — we'll identify the right solution for your operation.</p><a href="contact.html" class="btn-primary" style="font-size:0.85rem;padding:0.7rem 1.3rem;">Start a Conversation</a></div>
-    </div>
-    <div id="panel-salons" class="industry-panel">
-      <div class="use-case-card"><div class="uc-icon">💬</div><h4>AI Booking Assistant</h4><p>Conversational chatbot for booking appointments, answering service questions, and upselling add-ons — 24/7.</p></div>
-      <div class="use-case-card"><div class="uc-icon">⭐</div><h4>Review Response Generator</h4><p>AI drafts professional, personalized responses to Google and Yelp reviews for your team to approve and post.</p></div>
-      <div class="use-case-card"><div class="uc-icon">📲</div><h4>Client Rebooking Campaigns</h4><p>AI identifies clients who haven't booked in 60+ days and drafts personalized outreach messages automatically.</p></div>
-      <div class="use-case-card"><div class="uc-icon">✍️</div><h4>Menu / Service Describer</h4><p>AI generates compelling descriptions for new menu items or services from your bullet-point notes.</p></div>
-      <div class="use-case-card"><div class="uc-icon">📊</div><h4>Booking Analytics Briefing</h4><p>Weekly plain-language summary of booking trends, no-show rates, and peak times delivered to ownership.</p></div>
-      <div class="use-case-card" style="display:flex;flex-direction:column;justify-content:center;background:transparent;border-style:dashed;"><p style="font-size:0.88rem;color:var(--muted);margin-bottom:1rem;font-weight:300;">Not on this list? Your business is unique — book a discovery call and we'll map it out together.</p><a href="contact.html" class="btn-primary" style="font-size:0.85rem;padding:0.7rem 1.3rem;">Start a Conversation</a></div>
-    </div>
-    <div id="panel-realestate" class="industry-panel">
-      <div class="use-case-card"><div class="uc-icon">🏡</div><h4>Listing Description Writer</h4><p>Provide property details and AI generates a polished, MLS-ready listing description in your brand voice.</p></div>
-      <div class="use-case-card"><div class="uc-icon">🎯</div><h4>Lead Qualifier Chatbot</h4><p>AI asks qualifying questions to website visitors and routes hot leads to the right agent via email or SMS.</p></div>
-      <div class="use-case-card"><div class="uc-icon">📃</div><h4>Document Summarizer</h4><p>AI reads lengthy contracts, leases, or reports and produces a plain-language summary — in minutes.</p></div>
-      <div class="use-case-card"><div class="uc-icon">📧</div><h4>Client Update Drafter</h4><p>AI generates weekly client update emails based on notes entered by your team — keeping clients informed effortlessly.</p></div>
-      <div class="use-case-card"><div class="uc-icon">❓</div><h4>FAQ Knowledge Base Bot</h4><p>AI answers common client questions from your firm's own documents — accurately, 24 hours a day.</p></div>
-      <div class="use-case-card" style="display:flex;flex-direction:column;justify-content:center;background:transparent;border-style:dashed;"><p style="font-size:0.88rem;color:var(--muted);margin-bottom:1rem;font-weight:300;">Every firm is different. Book a call and we'll scope exactly what fits your practice.</p><a href="contact.html" class="btn-primary" style="font-size:0.85rem;padding:0.7rem 1.3rem;">Start a Conversation</a></div>
-    </div>
-    <div id="panel-retail" class="industry-panel">
-      <div class="use-case-card"><div class="uc-icon">🛒</div><h4>Product Description Generator</h4><p>AI generates SEO-optimized product descriptions from your specs and images at scale.</p></div>
-      <div class="use-case-card"><div class="uc-icon">🤖</div><h4>Customer Support Bot</h4><p>AI handles order status, returns, and FAQ inquiries — and escalates complex issues to your team automatically.</p></div>
-      <div class="use-case-card"><div class="uc-icon">📦</div><h4>Inventory Alert Summarizer</h4><p>AI reads your inventory reports and sends a plain-language daily briefing to ownership each morning.</p></div>
-      <div class="use-case-card"><div class="uc-icon">🛍️</div><h4>Abandoned Cart Recovery</h4><p>AI generates personalized abandoned cart recovery emails based on what was left in the cart.</p></div>
-      <div class="use-case-card"><div class="uc-icon">📱</div><h4>Social Caption Generator</h4><p>AI writes post captions for new products or promotions from a few quick notes — ready to post.</p></div>
-      <div class="use-case-card" style="display:flex;flex-direction:column;justify-content:center;background:transparent;border-style:dashed;"><p style="font-size:0.88rem;color:var(--muted);margin-bottom:1rem;font-weight:300;">Running a specific platform like Shopify or WooCommerce? Let's talk about what we can build for it.</p><a href="contact.html" class="btn-primary" style="font-size:0.85rem;padding:0.7rem 1.3rem;">Start a Conversation</a></div>
-    </div>
-  </div>
-</section>
 
-<section class="cta-section">
-  <div class="cta-strip reveal" style="max-width:1200px;margin:0 auto;">
-    <h2>Not sure which service fits?</h2>
-    <p>That's what discovery calls are for. Book a free 45-minute session and we'll identify the highest-value AI opportunity for your business.</p>
-    <div class="cta-strip-actions">
-      <a href="contact.html" class="btn-primary">Book a Free Discovery Call</a>
-      <a href="packages.html" class="btn-secondary">View Packages &amp; Pricing</a>
+    <div class="model-row">
+      <div class="model-row-top">
+        <span class="model-name">Cloud API (when it makes sense)</span>
+        <span class="model-badge cloud">Cloud</span>
+      </div>
+      <span class="model-use">Used for non-sensitive tasks where cloud processing is the right call, with clear data handling policies in place.</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- HOW WE CONNECT -->
+<div class="connect-section section-gap">
+  <p class="section-label">Integration</p>
+  <h2 class="section-title">How we connect AI to your existing stack</h2>
+
+  <div class="connect-grid">
+    <div class="connect-item">
+      <span class="connect-dot v"></span>
+      <div class="connect-text">
+        <strong>Website &amp; Booking Systems</strong>
+        Embedded directly into your site, whether that's Squarespace, WordPress, Wix, or a custom build
+      </div>
+    </div>
+    <div class="connect-item">
+      <span class="connect-dot c"></span>
+      <div class="connect-text">
+        <strong>CRM &amp; Job Management</strong>
+        ServiceTitan, HubSpot, Jobber, Salesforce, and most others through their APIs
+      </div>
+    </div>
+    <div class="connect-item">
+      <span class="connect-dot g"></span>
+      <div class="connect-text">
+        <strong>Internal Tools &amp; Files</strong>
+        Google Drive, SharePoint, Notion, your own databases. AI that actually reads what you already have.
+      </div>
+    </div>
+    <div class="connect-item">
+      <span class="connect-dot v"></span>
+      <div class="connect-text">
+        <strong>Communication Platforms</strong>
+        Email, SMS, WhatsApp, Facebook Messenger, Instagram DMs
+      </div>
+    </div>
+    <div class="connect-item">
+      <span class="connect-dot c"></span>
+      <div class="connect-text">
+        <strong>Custom Platforms &amp; APIs</strong>
+        Running something proprietary? I'll build the connector.
+      </div>
     </div>
   </div>
-</section>
+</div>
 
-<script>
-document.querySelectorAll('.ind-tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.ind-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.industry-panel').forEach(p => p.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById('panel-' + tab.dataset.panel).classList.add('active');
-  });
-});
-</script>
-<script>injectNav('services'); injectFooter();</script>
+<!-- USE CASES BY INDUSTRY -->
+<div class="usecases-section section-gap">
+  <p class="section-label">Use cases</p>
+  <h2 class="section-title">Built for your specific business</h2>
+  <p class="section-desc">Here's what I've built across the industries I work with. Your discovery call is where we figure out what fits your operation specifically.</p>
+
+  <div class="industry-list">
+
+    <div class="industry-item">
+      <div class="industry-header">
+        <span class="industry-icon">🔧</span>
+        <span class="industry-name">Trades &amp; Contractors</span>
+      </div>
+      <p class="industry-use">Automated quoting assistants, after-hours booking, job summary generation from field notes, invoice follow-up sequences</p>
+    </div>
+
+    <div class="industry-item">
+      <div class="industry-header">
+        <span class="industry-icon">✂️</span>
+        <span class="industry-name">Salons &amp; Spas</span>
+      </div>
+      <p class="industry-use">Appointment booking AI, service upsell recommendations, client rebooking campaigns, staff schedule support</p>
+    </div>
+
+    <div class="industry-item">
+      <div class="industry-header">
+        <span class="industry-icon">🍽️</span>
+        <span class="industry-name">Restaurants &amp; Hospitality</span>
+      </div>
+      <p class="industry-use">Reservation handling, menu Q&amp;A, catering inquiry intake, review response drafting</p>
+    </div>
+
+    <div class="industry-item">
+      <div class="industry-header">
+        <span class="industry-icon">🏠</span>
+        <span class="industry-name">Real Estate</span>
+      </div>
+      <p class="industry-use">Listing description writing, buyer and seller intake bots, CRM automation, market report generation</p>
+    </div>
+
+    <div class="industry-item">
+      <div class="industry-header">
+        <span class="industry-icon">🛍️</span>
+        <span class="industry-name">Retail &amp; E-Commerce</span>
+      </div>
+      <p class="industry-use">Product recommendation AI, customer service automation, inventory Q&amp;A, abandoned cart recovery</p>
+    </div>
+
+    <div class="industry-item">
+      <div class="industry-header">
+        <span class="industry-icon">🏥</span>
+        <span class="industry-name">Health &amp; Wellness</span>
+      </div>
+      <p class="industry-use">Intake forms, appointment reminders, post-visit follow-ups, privacy-conscious local deployments for sensitive data</p>
+    </div>
+
+    <div class="industry-item">
+      <div class="industry-header">
+        <span class="industry-icon">💼</span>
+        <span class="industry-name">Professional Services</span>
+      </div>
+      <p class="industry-use">Proposal drafting, client onboarding automation, document summarization, time-entry assistance</p>
+    </div>
+
+    <div class="industry-item">
+      <div class="industry-header">
+        <span class="industry-icon">🎯</span>
+        <span class="industry-name">Coaches &amp; Consultants</span>
+      </div>
+      <p class="industry-use">Discovery call intake, content repurposing, program delivery support, client progress tracking</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <h2>Not sure which service fits?</h2>
+  <p>That's exactly what the discovery call is for. We look at your business together, find where AI will make the biggest difference, and I tell you honestly what I'd build and what it would take.</p>
+  <a href="#" class="btn-primary">Book a Free Discovery Call</a>
+</div>
+
 </body>
 </html>
