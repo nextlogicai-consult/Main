@@ -2,7 +2,7 @@
 title: How Small Businesses Can Start Using AI Without Wasting Money
 date: 2025-06-03T13:05:00.000-06:00
 category: ai-small-business
-image: /images/blog/ai-small-business.jpg
+image: /images/small-business-efficiency.jpg
 readtime: 8 Min
 description: " Most small businesses waste money on AI because they start with
   tools instead of problems. This guide walks you through a simple, practical
