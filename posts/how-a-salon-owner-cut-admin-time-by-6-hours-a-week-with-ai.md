@@ -19,8 +19,6 @@ seo:
   og_image: /images/salon.jpg
 ---
 
----
-
 Sarah runs a six-chair hair salon in a mid-sized city. She has four stylists, a part-time receptionist, and about 200 active clients. She is good at her job. What she was not good at, by her own admission, was everything that happened around her job.
 
 "I was spending my Sunday evenings confirming appointments for the whole week," she told me. "And then Monday morning someone would cancel anyway and I would have no idea who to call to fill the spot."
