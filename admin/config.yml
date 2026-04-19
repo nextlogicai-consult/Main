@@ -2,9 +2,10 @@ backend:
   name: github
   repo: nextlogicai-consult/Main
   branch: main
-  base_url: https://netlify-cms-github-oauth-provider-pink-delta.vercel.app
-  auth_endpoint: /auth
-  
+base_url: https://www.nextlogic-ai.com
+auth_endpoint: /api/auth
+  site_url: https://www.nextlogic-ai.com
+
 media_folder: "images/blog"
 public_folder: "/images/blog"
 
@@ -30,4 +31,18 @@ collections:
       - { label: "Read Time (e.g. 7 min)", name: "readtime", widget: "string" }
       - { label: "Summary", name: "description", widget: "text" }
       - { label: "Featured Post?", name: "featured", widget: "boolean", default: false }
+      - label: "Featured Image"
+        name: "image"
+        widget: "image"
+        required: false
+        media_folder: "/images/blog"
+        public_folder: "/images/blog"
+      - label: "SEO"
+        name: "seo"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Meta Title", name: "meta_title", widget: "string", required: false }
+          - { label: "Meta Description", name: "meta_description", widget: "text", required: false }
+          - { label: "Slug", name: "slug", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
