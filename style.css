@@ -765,6 +765,29 @@ footer {
   max-width: 700px;
 }
 
+/* Decorative logo watermark — top-right of every page hero */
+.page-hero::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 4rem;
+  transform: translateY(-50%);
+  width: 220px;
+  height: 220px;
+  background-image: url('logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.07;
+  filter: brightness(3) saturate(0);
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (max-width: 900px) {
+  .page-hero::after { display: none; }
+}
+
 .page-hero-label {
   font-size: 0.85rem;
   font-weight: 500;
