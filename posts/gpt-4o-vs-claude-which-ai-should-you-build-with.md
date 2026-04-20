@@ -21,7 +21,7 @@ Let me walk you through what I have seen in practice.
 
 ## What We Are Actually Comparing
 
-GPT-4o is OpenAI's current flagship model. It is fast, multimodal (meaning it can handle images and audio as well as text), and has a massive ecosystem of tools, plugins, and integrations built around it.
+GPT-4o is OpenAI's current flagship model. It is fast, multimodal (meaning it can handle images and audio as well as text), and has a massive ecosystem of tools, plugins,  and integrations built around it.
 
 Claude is Anthropic's flagship model. It has a much larger context window, meaning it can read and reason about longer documents in a single pass. It tends to write in a more natural, less robotic tone. And it is notably better at following nuanced instructions without drifting.
 
