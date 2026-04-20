@@ -110,7 +110,7 @@
     <div id="nlai-header">
       <div class="dot"></div>
       <span class="title">NextLogicAI Assistant</span>
-      <span class="sub">Mistral · Local AI</span>
+      <span class="sub">Nextlogic's Local AI</span>
     </div>
     <div id="nlai-messages"></div>
     <div id="nlai-input-row">
