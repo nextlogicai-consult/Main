@@ -217,7 +217,8 @@ nav {
 
 
 .hero-inner {
-  max-width: 700px;
+  max-width: 1000px;
+  width: 100%;
   position: relative;
   z-index: 1;
 }
@@ -244,6 +245,7 @@ nav {
 .hero-sub {
   color: var(--muted);
   margin-bottom: 2rem;
+  max-width: 640px;
 }
 
 .hero-actions {
