@@ -59,7 +59,7 @@ nav {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  padding: 1.25rem 4rem;
+  padding: 0.75rem 4rem;
 }
 
 .nav-logo {
@@ -68,7 +68,7 @@ nav {
 }
 
 .nav-logo-img {
-  height: 100px;
+  height: 70px;
 }
 
 .nav-links-left,
@@ -206,13 +206,15 @@ nav {
    ════════════════════════════════════════════════ */
 
 #hero {
-  min-height: 100vh;
+  min-height: unset;
   display: flex;
   align-items: center;
-  padding: 6rem 4rem;
+  padding: 6rem 4rem 5rem;
   position: relative;
   overflow: hidden;
 }
+
+
 
 .hero-inner {
   max-width: 700px;
