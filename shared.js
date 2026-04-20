@@ -50,7 +50,7 @@ function injectNav(activePage) {
       </button>
     </nav>
 
-    <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
       <a href="index.html" class="mobile-nav-link${activePage === 'index' ? ' active' : ''}">Home</a>
       <a href="how-it-works.html" class="mobile-nav-link${activePage === 'how-it-works' ? ' active' : ''}">How It Works</a>
       <a href="services.html" class="mobile-nav-link${activePage === 'services' ? ' active' : ''}">Services</a>
@@ -64,21 +64,36 @@ function injectNav(activePage) {
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
 
+  function openMenu() {
+    hamburger.classList.add('open');
+    mobileMenu.classList.add('open');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    hamburger.setAttribute('aria-expanded', 'true');
+    hamburger.setAttribute('aria-label', 'Close menu');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', 'Open menu');
+    document.body.style.overflow = '';
+  }
+
   if (hamburger && mobileMenu) {
     hamburger.addEventListener('click', () => {
-      const isOpen = hamburger.classList.toggle('open');
-      mobileMenu.classList.toggle('open', isOpen);
-      hamburger.setAttribute('aria-expanded', String(isOpen));
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+      hamburger.classList.contains('open') ? closeMenu() : openMenu();
     });
 
     document.querySelectorAll('.mobile-nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        mobileMenu.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && hamburger.classList.contains('open')) closeMenu();
     });
   }
 
