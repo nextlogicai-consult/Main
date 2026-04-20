@@ -322,11 +322,12 @@ nav {
    ════════════════════════════════════════════════ */
 
 section {
-  padding: 5rem 4rem;
+  padding: 3.5rem 4rem;
 }
 
 #intro {
-  padding-top: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .section-label {
@@ -538,7 +539,7 @@ section {
    ════════════════════════════════════════════════ */
 
 .cta-section {
-  padding: 5rem 4rem;
+  padding: 3.5rem 4rem;
 }
 
 .cta-strip {
@@ -652,8 +653,9 @@ footer {
   .nav-logo { grid-column: auto; text-align: left; }
   .nav-logo-img { height: 80px; }
 
-  section { padding: 3rem 1.25rem; }
-  #hero { padding: 5rem 1.25rem 3rem; }
+  section { padding: 2.5rem 2rem; }
+  #hero { padding: 5rem 2rem 2rem; }
+  .cta-section { padding: 2.5rem 2rem; }
 
   #hero h1 { font-size: clamp(2rem, 8vw, 3rem); }
 
@@ -684,8 +686,8 @@ footer {
   nav { padding: 0.85rem 1rem; }
   .nav-logo-img { height: 64px; }
 
-  section { padding: 2.5rem 1rem; }
-  #hero { padding: 4.5rem 1rem 2.5rem; }
+  section { padding: 2rem 1rem; }
+  #hero { padding: 4rem 1rem 2rem; }
 
   .steps-row { grid-template-columns: 1fr; }
   .industry-grid { grid-template-columns: 1fr; }
@@ -765,10 +767,10 @@ footer {
    ════════════════════════════════════════════════ */
 
 .process-steps {
-  padding: 4rem;
+  padding: 2.5rem 4rem;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3rem;
 }
 
 .process-step {
@@ -776,7 +778,7 @@ footer {
   grid-template-columns: 80px 1fr 280px;
   gap: 3rem;
   align-items: start;
-  padding-bottom: 4rem;
+  padding-bottom: 2.5rem;
   border-bottom: 1px solid var(--border);
 }
 
