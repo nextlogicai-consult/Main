@@ -2263,6 +2263,261 @@ footer {
   opacity: 1;
 }
 
+/* ════════════════════════════════════════════════
+   BOOKING / CALENDLY (contact page)
+   ════════════════════════════════════════════════ */
+
+/* ── Calendly embed wrapper ── */
+.calendly-section {
+  padding: 0 0 4rem;
+}
+
+.calendly-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 8px 48px rgba(0,0,0,0.35);
+  background: rgba(255,255,255,0.02);
+}
+
+.calendly-inline-widget {
+  min-width: 320px;
+  height: 700px;
+  width: 100%;
+}
+
+/* ── Two-col layout: sidebar + calendar ── */
+.booking-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem 5rem;
+}
+
+/* ── Sidebar info ── */
+.booking-sidebar {
+  position: sticky;
+  top: 2rem;
+}
+
+.booking-sidebar h2 {
+  font-size: 1.75rem;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+.booking-sidebar p {
+  opacity: 0.7;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.call-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.call-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.call-detail-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(0,200,200,0.1);
+  border: 1px solid rgba(0,200,200,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.call-detail-text {
+  line-height: 1.5;
+}
+
+.call-detail-label {
+  font-size: 0.75rem;
+  opacity: 0.5;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.1rem;
+}
+
+.call-detail-value {
+  opacity: 0.85;
+}
+
+/* ── What happens section ── */
+.what-happens {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+.what-happens h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.5;
+  margin-bottom: 1rem;
+}
+
+.what-happens ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: steps;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.what-happens ol li {
+  counter-increment: steps;
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  opacity: 0.75;
+  line-height: 1.5;
+}
+
+.what-happens ol li::before {
+  content: counter(steps);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(0,200,200,0.15);
+  border: 1px solid rgba(0,200,200,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--cyan);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── Email fallback ── */
+.email-fallback {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  opacity: 0.55;
+}
+
+.email-fallback a {
+  color: var(--cyan);
+  text-decoration: none;
+}
+
+.email-fallback a:hover {
+  text-decoration: underline;
+}
+
+/* ── Fit section ── */
+.fit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 2.5rem auto 0;
+}
+
+.fit-col {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+}
+
+.fit-col h4 {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.fit-col.good { border-color: rgba(0,200,130,0.2); }
+.fit-col.good h4 { color: #00c882; }
+.fit-col.bad  { border-color: rgba(255,90,90,0.15); }
+.fit-col.bad  h4 { color: #ff7070; }
+
+.fit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.fit-list li {
+  font-size: 0.875rem;
+  opacity: 0.7;
+  line-height: 1.5;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.fit-list li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.fit-col.good .fit-list li::before { content: "✓"; color: #00c882; }
+.fit-col.bad  .fit-list li::before { content: "✕"; color: #ff7070; }
+
+/* ── Section layout utility ── */
+.section-inner-narrow {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-body {
+  padding: 4rem 2rem;
+}
+
+/* ════════════════════════════════════════════════
+   RESPONSIVE — BOOKING / CONTACT (new)
+   ════════════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+  .booking-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 0 1.25rem 3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .fit-grid  { grid-template-columns: 1fr; }
+  .faq-grid  { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 750px) {
+  .alt-grid  { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .section-body { padding: 3rem 1.25rem; }
+}
 /* ── contact responsive handled above ── 
 
 /* ── HONEST FIT SECTION ── */
