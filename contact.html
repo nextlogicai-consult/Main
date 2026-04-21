@@ -20,149 +20,401 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ContactPage","name":"Book a Discovery Call","url":"https://www.nextlogic-ai.com/contact.html","description":"Book a free 45-minute AI discovery call with NextLogicAI Consulting.","isPartOf":{"@id":"https://www.nextlogic-ai.com/#website"}}
 </script>
+
+<!-- Calendly widget CSS -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
+
+<style>
+/* ── Calendly embed wrapper ── */
+.calendly-section {
+  padding: 0 0 4rem;
+}
+
+.calendly-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 8px 48px rgba(0,0,0,0.35);
+  background: rgba(255,255,255,0.02);
+}
+
+.calendly-inline-widget {
+  min-width: 320px;
+  height: 700px;
+  width: 100%;
+}
+
+/* ── Two-col layout: sidebar + calendar ── */
+.booking-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem 5rem;
+}
+
+@media (max-width: 900px) {
+  .booking-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 0 1.25rem 3rem;
+  }
+}
+
+/* ── Sidebar info ── */
+.booking-sidebar {
+  position: sticky;
+  top: 2rem;
+}
+
+.booking-sidebar h2 {
+  font-size: 1.75rem;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+.booking-sidebar p {
+  opacity: 0.7;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.call-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.call-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.call-detail-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(0,200,200,0.1);
+  border: 1px solid rgba(0,200,200,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.call-detail-text {
+  line-height: 1.5;
+}
+
+.call-detail-label {
+  font-size: 0.75rem;
+  opacity: 0.5;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.1rem;
+}
+
+.call-detail-value {
+  opacity: 0.85;
+}
+
+/* ── What happens section ── */
+.what-happens {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+.what-happens h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.5;
+  margin-bottom: 1rem;
+}
+
+.what-happens ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: steps;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.what-happens ol li {
+  counter-increment: steps;
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  opacity: 0.75;
+  line-height: 1.5;
+}
+
+.what-happens ol li::before {
+  content: counter(steps);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(0,200,200,0.15);
+  border: 1px solid rgba(0,200,200,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--cyan, #00c8c8);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── Email fallback ── */
+.email-fallback {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  opacity: 0.55;
+}
+
+.email-fallback a {
+  color: var(--cyan, #00c8c8);
+  text-decoration: none;
+}
+
+.email-fallback a:hover {
+  text-decoration: underline;
+}
+
+/* ── Fit section ── */
+.fit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 2.5rem auto 0;
+}
+
+@media (max-width: 700px) {
+  .fit-grid { grid-template-columns: 1fr; }
+}
+
+.fit-col {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+}
+
+.fit-col h4 {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.fit-col.good { border-color: rgba(0,200,130,0.2); }
+.fit-col.good h4 { color: #00c882; }
+.fit-col.bad  { border-color: rgba(255,90,90,0.15); }
+.fit-col.bad  h4 { color: #ff7070; }
+
+.fit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.fit-list li {
+  font-size: 0.875rem;
+  opacity: 0.7;
+  line-height: 1.5;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.fit-list li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.fit-col.good .fit-list li::before { content: "✓"; color: #00c882; }
+.fit-col.bad  .fit-list li::before { content: "✕"; color: #ff7070; }
+
+/* ── FAQ ── */
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 2.5rem auto 0;
+}
+
+@media (max-width: 700px) {
+  .faq-grid { grid-template-columns: 1fr; }
+}
+
+.faq-item {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+}
+
+.faq-item h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.65rem;
+  line-height: 1.4;
+}
+
+.faq-item p {
+  font-size: 0.875rem;
+  opacity: 0.65;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── Alt cards ── */
+.alt-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  max-width: 900px;
+  margin: 2.5rem auto 0;
+}
+
+@media (max-width: 750px) {
+  .alt-grid { grid-template-columns: 1fr; }
+}
+
+.alt-card {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.alt-card .alt-icon { font-size: 1.5rem; margin-bottom: 0.25rem; }
+.alt-card h3 { font-size: 0.95rem; margin: 0; }
+.alt-card p { font-size: 0.85rem; opacity: 0.6; line-height: 1.6; margin: 0; flex: 1; }
+.alt-card a { font-size: 0.85rem; color: var(--cyan, #00c8c8); text-decoration: none; margin-top: 0.5rem; }
+.alt-card a:hover { text-decoration: underline; }
+
+/* ── Section layout utility ── */
+.section-inner-narrow {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-body {
+  padding: 4rem 2rem;
+}
+
+@media (max-width: 600px) {
+  .section-body { padding: 3rem 1.25rem; }
+}
+</style>
 </head>
 <body>
 
+<!-- ─────────────────── HERO ─────────────────── -->
 <div class="page-hero">
   <div class="page-hero-bg">
     <div class="grid-lines"></div>
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
   </div>
-<div class="section-inner">
-  <div class="page-hero-inner">
-    <div class="page-hero-label">Get Started</div>
-    <h1>Let's talk about<br>your <span class="accent-c">business</span></h1>
-    <p>Most of our best client relationships started with someone filling out this form and not being totally sure if AI was even the right move. That's fine. That's exactly what the call is for.</p>
+  <div class="section-inner">
+    <div class="page-hero-inner">
+      <div class="page-hero-label">Get Started</div>
+      <h1>Let's talk about<br>your <span class="accent-c">business</span></h1>
+      <p>Pick a time that works for you. No slides. No pitch. Just a real conversation about whether AI is the right move — and if it is, what that actually looks like for your business.</p>
+    </div>
   </div>
- </div>
 </div>
+
 <hr class="divider">
 
-<section id="contact-main">
-  <div class="contact-layout">
+<!-- ─────────────────── BOOKING ─────────────────── -->
+<section id="booking" class="section-body">
+  <div class="booking-layout">
 
-    <div class="contact-info reveal">
+    <!-- Sidebar -->
+    <div class="booking-sidebar reveal">
+      <h2>Book your free discovery call</h2>
+      <p>45 minutes. Free. No commitment. We'll ask a lot of questions, listen carefully, and give you an honest read on whether AI can help — and if so, where to start.</p>
 
-      <div class="contact-promise">
-        <h3>What actually happens on this call</h3>
-        <p>It's not a sales call. We won't show you a deck or spend 40 minutes explaining what AI is. We're going to ask you a lot of questions about your business, listen carefully, and at the end give you an honest read on whether what you're describing is something AI can actually help with.</p>
-        <p style="margin-top:0.75rem;">Sometimes the answer is yes and we can start scoping something right away. Sometimes the answer is "not yet" and we'll tell you what would need to change first. Either way, you leave the call knowing something useful.</p>
-      </div>
-
-      <div class="contact-detail">
-        <div class="cd-icon">🌐</div>
-        <div>
-          <div class="cd-label">Location</div>
-          <div class="cd-value">Remote, serving small businesses across Canada</div>
+      <div class="call-details">
+        <div class="call-detail">
+          <div class="call-detail-icon">⏱</div>
+          <div class="call-detail-text">
+            <div class="call-detail-label">Duration</div>
+            <div class="call-detail-value">45 – 60 minutes</div>
+          </div>
+        </div>
+        <div class="call-detail">
+          <div class="call-detail-icon">📹</div>
+          <div class="call-detail-text">
+            <div class="call-detail-label">Format</div>
+            <div class="call-detail-value">Video call (link sent on confirmation)</div>
+          </div>
+        </div>
+        <div class="call-detail">
+          <div class="call-detail-icon">💰</div>
+          <div class="call-detail-text">
+            <div class="call-detail-label">Cost</div>
+            <div class="call-detail-value">Free — no credit card required</div>
+          </div>
+        </div>
+        <div class="call-detail">
+          <div class="call-detail-icon">🌐</div>
+          <div class="call-detail-text">
+            <div class="call-detail-label">Who we serve</div>
+            <div class="call-detail-value">Small businesses across Canada</div>
+          </div>
         </div>
       </div>
 
-      <div class="contact-detail">
-        <div class="cd-icon">📧</div>
-        <div>
-          <div class="cd-label">Email</div>
-          <div class="cd-value"><a href="mailto:info@nextlogicai.com">info@nextlogicai.com</a></div>
-        </div>
+      <div class="what-happens">
+        <h4>After you book</h4>
+        <ol>
+          <li>Confirmation email with a video link lands in your inbox</li>
+          <li>Short agenda sent so you know what we'll cover</li>
+          <li>45-minute call — mostly us asking, you talking</li>
+          <li>Same day follow-up summarizing what we heard</li>
+          <li>If there's a fit, a one-page project brief within 2–3 days</li>
+          <li>No pressure either way — if AI isn't the right move, we'll say so</li>
+        </ol>
       </div>
 
-      <div class="contact-detail">
-        <div class="cd-icon">⏱️</div>
-        <div>
-          <div class="cd-label">Response time</div>
-          <div class="cd-value">Within 4 business hours</div>
-        </div>
-      </div>
-
-      <div class="contact-detail">
-        <div class="cd-icon">📅</div>
-        <div>
-          <div class="cd-label">Call length</div>
-          <div class="cd-value">45 to 60 minutes, video preferred</div>
-        </div>
-      </div>
-
-      <div class="what-to-expect">
-        <h4>After you hit submit</h4>
-        <ul class="expect-items">
-          <li>You'll hear back within 4 business hours with a few time slots to choose from</li>
-          <li>We'll send a short agenda so you know what we'll be covering</li>
-          <li>The call runs 45 to 60 minutes over video</li>
-          <li>Same day, you'll get a follow-up email summarizing what we heard in your own words</li>
-          <li>If there's a fit, a one-page project brief lands in your inbox within 2 to 3 days</li>
-          <li>No pressure either way. If AI isn't the right move right now, we'll say so</li>
-        </ul>
-      </div>
-
+      <p class="email-fallback">Prefer email first? Reach us at <a href="mailto:info@nextlogicai.com">info@nextlogicai.com</a> — we respond within 4 business hours.</p>
     </div>
 
-    <div class="contact-form-wrap reveal">
-      <div id="theForm">
-        <h2>Tell us about your business</h2>
-        <p class="form-subtitle">Fill in what you can and we'll cover the rest on the call. The more context you give us, the more useful the conversation will be.</p>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="first_name" placeholder="Sarah" autocomplete="given-name">
-          </div>
-          <div class="form-group">
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="last_name" placeholder="Johnson" autocomplete="family-name">
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="you@yourbusiness.com" autocomplete="email">
-        </div>
-
-        <div class="form-group">
-          <label for="business">Business Name</label>
-          <input type="text" id="business" name="business_name" placeholder="Your Business Name">
-        </div>
-
-        <div class="form-group">
-          <label for="industry">Industry</label>
-          <select id="industry" name="industry">
-            <option value="" disabled selected>Select your industry</option>
-            <option>Trades &amp; Field Services</option>
-            <option>Salons &amp; Hospitality</option>
-            <option>Real Estate</option>
-            <option>Professional Services</option>
-            <option>Retail &amp; E-Commerce</option>
-            <option>Health &amp; Wellness</option>
-            <option>Coaching &amp; Consulting</option>
-            <option>Other</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="pain">What's the biggest problem you're trying to solve?</label>
-          <textarea id="pain" name="problem" placeholder="e.g. My team spends 3 hours a day on follow-up emails and it's killing our capacity..."></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="timeline">When are you looking to move forward?</label>
-          <select id="timeline" name="timeline">
-            <option value="" disabled selected>Select a timeframe</option>
-            <option>As soon as possible</option>
-            <option>Within the next month</option>
-            <option>1 to 3 months from now</option>
-            <option>Just exploring for now</option>
-          </select>
-        </div>
-
-        <button class="form-submit" id="submitBtn" onclick="submitForm()">Request a Discovery Call &rarr;</button>
-        <p class="form-note">No commitment required. We'll confirm your request within 4 business hours.</p>
-      </div>
-
-      <div class="form-success" id="formSuccess">
-        <div class="success-icon">&#10003;</div>
-        <h3>Request received!</h3>
-        <p>Thanks for reaching out. We'll be in touch within 4 business hours with some available times for your discovery call.</p>
-        <p style="margin-top:0.5rem;">In the meantime, feel free to explore our <a href="services.html" style="color:var(--cyan);text-decoration:none;">services</a> or <a href="packages.html" style="color:var(--cyan);text-decoration:none;">packages</a>.</p>
+    <!-- Calendly embed -->
+    <div class="reveal">
+      <div class="calendly-wrap">
+        <div
+          class="calendly-inline-widget"
+          data-url="https://calendly.com/nextlogicai/discovery-call?hide_gdpr_banner=1&primary_color=00c8c8"
+        ></div>
       </div>
     </div>
 
@@ -171,29 +423,32 @@
 
 <hr class="divider">
 
-<section id="honest-section">
-  <div class="honest-inner reveal">
-    <div class="section-label">Being Upfront</div>
-    <h2 class="section-title">We're not the right fit for everyone</h2>
-    <p class="section-desc" style="margin-bottom:2.5rem;">We'd rather tell you that now than waste both our time. Here's a straightforward look at who we work well with and who we probably don't.</p>
-    <div class="honest-grid">
-      <div class="honest-col">
-        <h4>We're probably a good fit if...</h4>
-        <ul class="honest-list good">
-          <li>You have a specific, repeatable problem that's costing you time every week</li>
+<!-- ─────────────────── FIT ─────────────────── -->
+<section id="honest-section" class="section-body">
+  <div class="section-inner-narrow">
+    <div class="reveal">
+      <div class="section-label">Being Upfront</div>
+      <h2 class="section-title">We're not the right fit for everyone</h2>
+      <p class="section-desc">We'd rather say that now than waste both our time.</p>
+    </div>
+    <div class="fit-grid reveal">
+      <div class="fit-col good">
+        <h4>Good fit if...</h4>
+        <ul class="fit-list">
+          <li>You have a specific, repeatable problem costing you time every week</li>
           <li>Your team is willing to learn and adapt to new tools</li>
-          <li>You want a long-term partner, not just someone to hand you a manual and disappear</li>
-          <li>You'd rather start small and prove value before scaling up</li>
-          <li>You care more about something that actually works than something that looks impressive</li>
+          <li>You want a long-term partner, not a manual and a goodbye</li>
+          <li>You'd rather start small and prove value before scaling</li>
+          <li>You care more about something that works than something that looks impressive</li>
         </ul>
       </div>
-      <div class="honest-col">
-        <h4>We're probably not the right fit if...</h4>
-        <ul class="honest-list bad">
-          <li>You need something built in 48 hours with no planning involved</li>
-          <li>Your data is completely disorganized and you're not ready to address that yet</li>
+      <div class="fit-col bad">
+        <h4>Probably not if...</h4>
+        <ul class="fit-list">
+          <li>You need something built in 48 hours with no planning</li>
+          <li>Your data is completely disorganized and you're not ready to fix that</li>
           <li>You want to hand off a problem and never think about it again</li>
-          <li>You're shopping purely on price regardless of the outcome</li>
+          <li>You're shopping purely on price regardless of outcome</li>
           <li>You need something outside our core service areas</li>
         </ul>
       </div>
@@ -203,45 +458,44 @@
 
 <hr class="divider">
 
-<section id="faq">
-  <div class="section-inner">
-  <div class="faq-inner">
+<!-- ─────────────────── FAQ ─────────────────── -->
+<section id="faq" class="section-body">
+  <div class="section-inner-narrow">
     <div class="reveal">
       <div class="section-label">Common Questions</div>
       <h2 class="section-title">Things people ask before booking</h2>
-      <p class="section-desc">If something is stopping you from filling out the form, the answer is probably here.</p>
+      <p class="section-desc">If something is stopping you from picking a time, the answer is probably here.</p>
     </div>
-  </div>
     <div class="faq-grid reveal">
 
       <div class="faq-item">
         <h4>Do I need to know anything about AI before the call?</h4>
-        <p>Not at all. We work with business owners who have never touched an AI tool and with people who have already tried a few things and gotten stuck. Either way, we start from where you are, not where we assume you should be.</p>
+        <p>Not at all. We work with people who have never touched an AI tool and with people who've tried a few things and gotten stuck. We start from where you are.</p>
       </div>
 
       <div class="faq-item">
         <h4>What if I'm not sure AI is even the right solution?</h4>
-        <p>That's one of the most common things we hear. Honestly, figuring out whether AI is the right tool is half the point of the discovery call. Sometimes it is. Sometimes a simpler fix makes more sense and we'll tell you that directly.</p>
+        <p>That's one of the most common things we hear. Figuring out whether AI is the right tool is half the point of the call. Sometimes it is. Sometimes a simpler fix makes more sense — and we'll tell you that directly.</p>
       </div>
 
       <div class="faq-item">
         <h4>Is this actually free or is there a catch?</h4>
-        <p>It's genuinely free. No credit card, no trial, nothing to cancel. We do discovery calls because they're the only honest way to figure out if there's a real fit. We'd rather invest 45 minutes upfront than take on a project that isn't right for either of us.</p>
+        <p>Genuinely free. No credit card, no trial, nothing to cancel. We do discovery calls because they're the only honest way to figure out if there's a real fit.</p>
       </div>
 
       <div class="faq-item">
         <h4>How quickly can we get started after the call?</h4>
-        <p>If there's a clear fit, we can usually have a project brief in front of you within 2 to 3 days. Timelines from there depend on scope. Starter projects typically run 1 to 2 weeks and Builder projects run 2 to 4 weeks from signed brief to launch.</p>
+        <p>If there's a clear fit, a project brief is usually in front of you within 2–3 days. Starter projects run 1–2 weeks and Builder projects run 2–4 weeks from signed brief to launch.</p>
       </div>
 
       <div class="faq-item">
         <h4>What does it cost?</h4>
-        <p>We don't publish fixed prices because scope varies too much for that to be honest. What we can tell you is that we price on the value delivered, not hours spent, and we'll never recommend a bigger engagement than your situation actually calls for. You'll have full pricing in writing before anything gets started.</p>
+        <p>We don't publish fixed prices because scope varies too much for that to be honest. We price on value delivered, not hours spent. You'll have full pricing in writing before anything gets started.</p>
       </div>
 
       <div class="faq-item">
         <h4>What if I just want to ask a quick question first?</h4>
-        <p>Email us at <a href="mailto:info@nextlogicai.com" style="color:var(--cyan);text-decoration:none;">info@nextlogicai.com</a> and we'll get back to you within 4 business hours. No question is too basic and we won't try to turn every email into a sales conversation.</p>
+        <p>Email us at <a href="mailto:info@nextlogicai.com" style="color:var(--cyan);text-decoration:none;">info@nextlogicai.com</a> and we'll get back to you within 4 business hours. No question is too basic.</p>
       </div>
 
     </div>
@@ -250,92 +504,39 @@
 
 <hr class="divider">
 
-<section id="alternatives">
-  <div class="alt-inner">
-    <div class="section-inner">
+<!-- ─────────────────── ALTERNATIVES ─────────────────── -->
+<section id="alternatives" class="section-body">
+  <div class="section-inner-narrow">
     <div class="reveal">
       <div class="section-label">Do Your Research First</div>
       <h2 class="section-title">Not ready to book just yet?</h2>
-      <p class="section-desc">Take your time. Here's where to go if you want to learn more before reaching out.</p>
-    </div>
+      <p class="section-desc">Take your time. Here's where to go first.</p>
     </div>
     <div class="alt-grid reveal">
       <div class="alt-card">
         <div class="alt-icon">📋</div>
         <h3>What we actually build</h3>
-        <p>A full breakdown of every service type we offer, the AI models we use, the platforms we integrate with, and real examples by industry. Good starting point if you're trying to figure out whether what you need is something we do.</p>
-        <a href="services.html">View Services &rarr;</a>
+        <p>Every service type, the AI models we use, platforms we integrate with, and real examples by industry.</p>
+        <a href="services.html">View Services →</a>
       </div>
       <div class="alt-card">
         <div class="alt-icon">📦</div>
         <h3>How we structure projects</h3>
-        <p>Three project tiers, four retainer levels, transparent add-on pricing, and our full philosophy on how we approach value and scope. Worth reading before the call so you come in with the right expectations.</p>
-        <a href="packages.html">View Packages &rarr;</a>
+        <p>Three project tiers, four retainer levels, transparent add-on pricing, and our philosophy on scope and value.</p>
+        <a href="packages.html">View Packages →</a>
       </div>
       <div class="alt-card">
         <div class="alt-icon">🔄</div>
         <h3>How a project actually runs</h3>
-        <p>A step-by-step walkthrough of our process from first conversation to post-launch support. If you want to know exactly what working with us looks like before committing to anything, start here.</p>
-        <a href="how-it-works.html">How It Works &rarr;</a>
+        <p>A step-by-step walkthrough from first conversation to post-launch support.</p>
+        <a href="how-it-works.html">How It Works →</a>
       </div>
     </div>
   </div>
 </section>
 
-<script>
-async function submitForm() {
-  const fname = document.getElementById('fname').value.trim();
-  const lname = document.getElementById('lname').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const business = document.getElementById('business').value.trim();
-  const industry = document.getElementById('industry').value;
-  const pain = document.getElementById('pain').value.trim();
-  const timeline = document.getElementById('timeline').value;
-
-  if (!fname || !email) {
-    alert('Please fill in your name and email address to continue.');
-    return;
-  }
-  if (!email.includes('@') || !email.includes('.')) {
-    alert('Please enter a valid email address.');
-    return;
-  }
-
-  const btn = document.getElementById('submitBtn');
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
-
-  try {
-    const response = await fetch('https://calendly.com/nextlogicai', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        first_name: fname,
-        last_name: lname,
-        email: email,
-        business_name: business,
-        industry: industry,
-        problem: pain,
-        timeline: timeline
-      })
-    });
-
-    if (response.ok) {
-      document.getElementById('theForm').style.display = 'none';
-      document.getElementById('formSuccess').classList.add('show');
-      window.scrollTo({ top: document.querySelector('.contact-form-wrap').offsetTop - 100, behavior: 'smooth' });
-    } else {
-      btn.textContent = 'Request a Discovery Call \u2192';
-      btn.disabled = false;
-      alert('Something went wrong. Please try again or email us directly at info@nextlogicai.com');
-    }
-  } catch (err) {
-    btn.textContent = 'Request a Discovery Call \u2192';
-    btn.disabled = false;
-    alert('Something went wrong. Please try again or email us directly at info@nextlogicai.com');
-  }
-}
-</script>
+<!-- Calendly widget JS -->
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
 <script src="shared.js"></script>
 <script>injectNav('contact'); injectFooter();</script>
