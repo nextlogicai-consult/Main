@@ -25,313 +25,243 @@
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<style>
-/* ── Calendly embed wrapper ── */
-.calendly-section {
-  padding: 0 0 4rem;
-}
+<!-- ─────────────────── HERO ─────────────────── -->
+<div class="page-hero">
+  <div class="page-hero-bg">
+    <div class="grid-lines"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+  <div class="section-inner">
+    <div class="page-hero-inner">
+      <div class="page-hero-label">Get Started</div>
+      <h1>Let's talk about<br>your <span class="accent-c">business</span></h1>
+      <p>Pick a time that works for you. No slides. No pitch. Just a real conversation about whether AI is the right move — and if it is, what that actually looks like for your business.</p>
+    </div>
+  </div>
+</div>
 
-.calendly-wrap {
-  max-width: 900px;
-  margin: 0 auto;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 8px 48px rgba(0,0,0,0.35);
-  background: rgba(255,255,255,0.02);
-}
+<hr class="divider">
 
-.calendly-inline-widget {
-  min-width: 320px;
-  height: 700px;
-  width: 100%;
-}
+<!-- ─────────────────── BOOKING ─────────────────── -->
+<section id="booking" class="section-body">
+  <div class="booking-layout">
 
-/* ── Two-col layout: sidebar + calendar ── */
-.booking-layout {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 4rem;
-  align-items: start;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 2rem 5rem;
-}
+    <!-- Sidebar -->
+    <div class="booking-sidebar reveal">
+      <h2>Book your free discovery call</h2>
+      <p>45 minutes. Free. No commitment. We'll ask a lot of questions, listen carefully, and give you an honest read on whether AI can help — and if so, where to start.</p>
 
-@media (max-width: 900px) {
-  .booking-layout {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    padding: 0 1.25rem 3rem;
-  }
-}
+      <div class="call-details">
+        <div class="call-detail">
+          <div class="call-detail-icon">⏱</div>
+          <div class="call-detail-text">
+            <div class="call-detail-label">Duration</div>
+            <div class="call-detail-value">45 – 60 minutes</div>
+          </div>
+        </div>
+        <div class="call-detail">
+          <div class="call-detail-icon">📹</div>
+          <div class="call-detail-text">
+            <div class="call-detail-label">Format</div>
+            <div class="call-detail-value">Video call (link sent on confirmation)</div>
+          </div>
+        </div>
+        <div class="call-detail">
+          <div class="call-detail-icon">💰</div>
+          <div class="call-detail-text">
+            <div class="call-detail-label">Cost</div>
+            <div class="call-detail-value">Free — no credit card required</div>
+          </div>
+        </div>
+        <div class="call-detail">
+          <div class="call-detail-icon">🌐</div>
+          <div class="call-detail-text">
+            <div class="call-detail-label">Who we serve</div>
+            <div class="call-detail-value">Small businesses across Canada</div>
+          </div>
+        </div>
+      </div>
 
-/* ── Sidebar info ── */
-.booking-sidebar {
-  position: sticky;
-  top: 2rem;
-}
+      <div class="what-happens">
+        <h4>After you book</h4>
+        <ol>
+          <li>Confirmation email with a video link lands in your inbox</li>
+          <li>Short agenda sent so you know what we'll cover</li>
+          <li>45-minute call — mostly us asking, you talking</li>
+          <li>Same day follow-up summarizing what we heard</li>
+          <li>If there's a fit, a one-page project brief within 2–3 days</li>
+          <li>No pressure either way — if AI isn't the right move, we'll say so</li>
+        </ol>
+      </div>
 
-.booking-sidebar h2 {
-  font-size: 1.75rem;
-  line-height: 1.25;
-  margin-bottom: 1rem;
-}
+      <p class="email-fallback">Prefer email first? Reach us at <a href="mailto:info@nextlogicai.com">info@nextlogicai.com</a> — we respond within 4 business hours.</p>
+    </div>
 
-.booking-sidebar p {
-  opacity: 0.7;
-  font-size: 0.95rem;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-}
+    <!-- Calendly embed -->
+    <div class="reveal">
+      <div class="calendly-wrap">
+        <div
+          class="calendly-inline-widget"
+          data-url="https://calendly.com/nextlogicai/discovery-call?hide_gdpr_banner=1&primary_color=00c8c8"
+        ></div>
+      </div>
+    </div>
 
-.call-details {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-  margin-bottom: 2rem;
-}
+  </div>
+</section>
 
-.call-detail {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  font-size: 0.9rem;
-}
+<hr class="divider">
 
-.call-detail-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  background: rgba(0,200,200,0.1);
-  border: 1px solid rgba(0,200,200,0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.85rem;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
+<!-- ─────────────────── FIT ─────────────────── -->
+<section id="honest-section" class="section-body">
+  <div class="section-inner-narrow">
+    <div class="reveal">
+      <div class="section-label">Being Upfront</div>
+      <h2 class="section-title">We're not the right fit for everyone</h2>
+      <p class="section-desc">We'd rather say that now than waste both our time.</p>
+    </div>
+    <div class="fit-grid reveal">
+      <div class="fit-col good">
+        <h4>Good fit if...</h4>
+        <ul class="fit-list">
+          <li>You have a specific, repeatable problem costing you time every week</li>
+          <li>Your team is willing to learn and adapt to new tools</li>
+          <li>You want a long-term partner, not a manual and a goodbye</li>
+          <li>You'd rather start small and prove value before scaling</li>
+          <li>You care more about something that works than something that looks impressive</li>
+        </ul>
+      </div>
+      <div class="fit-col bad">
+        <h4>Probably not if...</h4>
+        <ul class="fit-list">
+          <li>You need something built in 48 hours with no planning</li>
+          <li>Your data is completely disorganized and you're not ready to fix that</li>
+          <li>You want to hand off a problem and never think about it again</li>
+          <li>You're shopping purely on price regardless of outcome</li>
+          <li>You need something outside our core service areas</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-.call-detail-text {
-  line-height: 1.5;
-}
+<hr class="divider">
 
-.call-detail-label {
-  font-size: 0.75rem;
-  opacity: 0.5;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 0.1rem;
-}
+<!-- ─────────────────── FAQ ─────────────────── -->
+<section id="faq" class="section-body">
+  <div class="section-inner-narrow">
+    <div class="reveal">
+      <div class="section-label">Common Questions</div>
+      <h2 class="section-title">Things people ask before booking</h2>
+      <p class="section-desc">If something is stopping you from picking a time, the answer is probably here.</p>
+    </div>
+    <div class="faq-grid reveal">
 
-.call-detail-value {
-  opacity: 0.85;
-}
+      <div class="faq-item">
+        <h4>Do I need to know anything about AI before the call?</h4>
+        <p>Not at all. We work with people who have never touched an AI tool and with people who've tried a few things and gotten stuck. We start from where you are.</p>
+      </div>
 
-/* ── What happens section ── */
-.what-happens {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 12px;
-  padding: 1.25rem 1.5rem;
-}
+      <div class="faq-item">
+        <h4>What if I'm not sure AI is even the right solution?</h4>
+        <p>That's one of the most common things we hear. Figuring out whether AI is the right tool is half the point of the call. Sometimes it is. Sometimes a simpler fix makes more sense — and we'll tell you that directly.</p>
+      </div>
 
-.what-happens h4 {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  opacity: 0.5;
-  margin-bottom: 1rem;
-}
+      <div class="faq-item">
+        <h4>Is this actually free or is there a catch?</h4>
+        <p>Genuinely free. No credit card, no trial, nothing to cancel. We do discovery calls because they're the only honest way to figure out if there's a real fit.</p>
+      </div>
 
-.what-happens ol {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  counter-reset: steps;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
+      <div class="faq-item">
+        <h4>How quickly can we get started after the call?</h4>
+        <p>If there's a clear fit, a project brief is usually in front of you within 2–3 days. Starter projects run 1–2 weeks and Builder projects run 2–4 weeks from signed brief to launch.</p>
+      </div>
 
-.what-happens ol li {
-  counter-increment: steps;
-  display: flex;
-  gap: 0.75rem;
-  font-size: 0.875rem;
-  opacity: 0.75;
-  line-height: 1.5;
-}
+      <div class="faq-item">
+        <h4>What does it cost?</h4>
+        <p>We don't publish fixed prices because scope varies too much for that to be honest. We price on value delivered, not hours spent. You'll have full pricing in writing before anything gets started.</p>
+      </div>
 
-.what-happens ol li::before {
-  content: counter(steps);
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: rgba(0,200,200,0.15);
-  border: 1px solid rgba(0,200,200,0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: var(--cyan, #00c8c8);
-  flex-shrink: 0;
-  margin-top: 2px;
-}
+      <div class="faq-item">
+        <h4>What if I just want to ask a quick question first?</h4>
+        <p>Email us at <a href="mailto:info@nextlogicai.com" style="color:var(--cyan);text-decoration:none;">info@nextlogicai.com</a> and we'll get back to you within 4 business hours. No question is too basic.</p>
+      </div>
 
-/* ── Email fallback ── */
-.email-fallback {
-  margin-top: 1.5rem;
-  font-size: 0.85rem;
-  opacity: 0.55;
-}
+    </div>
+  </div>
+</section>
 
-.email-fallback a {
-  color: var(--cyan, #00c8c8);
-  text-decoration: none;
-}
+<hr class="divider">
 
-.email-fallback a:hover {
-  text-decoration: underline;
-}
+<!-- ─────────────────── ALTERNATIVES ─────────────────── -->
+<section id="alternatives" class="section-body">
+  <div class="section-inner-narrow">
+    <div class="reveal">
+      <div class="section-label">Do Your Research First</div>
+      <h2 class="section-title">Not ready to book just yet?</h2>
+      <p class="section-desc">Take your time. Here's where to go first.</p>
+    </div>
+    <div class="alt-grid reveal">
+      <div class="alt-card">
+        <div class="alt-icon">📋</div>
+        <h3>What we actually build</h3>
+        <p>Every service type, the AI models we use, platforms we integrate with, and real examples by industry.</p>
+        <a href="services.html">View Services →</a>
+      </div>
+      <div class="alt-card">
+        <div class="alt-icon">📦</div>
+        <h3>How we structure projects</h3>
+        <p>Three project tiers, four retainer levels, transparent add-on pricing, and our philosophy on scope and value.</p>
+        <a href="packages.html">View Packages →</a>
+      </div>
+      <div class="alt-card">
+        <div class="alt-icon">🔄</div>
+        <h3>How a project actually runs</h3>
+        <p>A step-by-step walkthrough from first conversation to post-launch support.</p>
+        <a href="how-it-works.html">How It Works →</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-/* ── Fit section ── */
-.fit-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  max-width: 900px;
-  margin: 2.5rem auto 0;
-}
+<!-- Calendly widget JS -->
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
-@media (max-width: 700px) {
-  .fit-grid { grid-template-columns: 1fr; }
-}
+<script src="shared.js"></script>
+<script>injectNav('contact'); injectFooter();</script>
+<script src="chatbot.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Free Discovery Call — NextLogicAI Consulting</title>
+<meta name="description" content="Book a free 45-minute AI discovery call with NextLogicAI. No pitch, no commitment — just an honest assessment of whether AI is the right fit for your business.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.nextlogic-ai.com/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nextlogic-ai.com/contact.html">
+<meta property="og:title" content="Book a Free Discovery Call — NextLogicAI Consulting">
+<meta property="og:description" content="Book a free 45-minute AI discovery call. No pitch, no commitment — just an honest conversation about your business.">
+<meta property="og:image" content="https://www.nextlogic-ai.com/og-image.jpg">
+<meta property="og:site_name" content="NextLogicAI Consulting">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Book a Free Discovery Call — NextLogicAI Consulting">
+<meta name="twitter:description" content="45 minutes. No slides. No pitch. Just a conversation about whether AI is the right fit for your business.">
+<meta name="twitter:image" content="https://www.nextlogic-ai.com/og-image.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ContactPage","name":"Book a Discovery Call","url":"https://www.nextlogic-ai.com/contact.html","description":"Book a free 45-minute AI discovery call with NextLogicAI Consulting.","isPartOf":{"@id":"https://www.nextlogic-ai.com/#website"}}
+</script>
 
-.fit-col {
-  background: rgba(255,255,255,0.025);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 14px;
-  padding: 1.5rem 1.75rem;
-}
+<!-- Calendly widget CSS -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
-.fit-col h4 {
-  font-size: 0.875rem;
-  margin-bottom: 1rem;
-  opacity: 0.9;
-}
-
-.fit-col.good { border-color: rgba(0,200,130,0.2); }
-.fit-col.good h4 { color: #00c882; }
-.fit-col.bad  { border-color: rgba(255,90,90,0.15); }
-.fit-col.bad  h4 { color: #ff7070; }
-
-.fit-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-}
-
-.fit-list li {
-  font-size: 0.875rem;
-  opacity: 0.7;
-  line-height: 1.5;
-  padding-left: 1.25rem;
-  position: relative;
-}
-
-.fit-list li::before {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.fit-col.good .fit-list li::before { content: "✓"; color: #00c882; }
-.fit-col.bad  .fit-list li::before { content: "✕"; color: #ff7070; }
-
-/* ── FAQ ── */
-.faq-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  max-width: 900px;
-  margin: 2.5rem auto 0;
-}
-
-@media (max-width: 700px) {
-  .faq-grid { grid-template-columns: 1fr; }
-}
-
-.faq-item {
-  background: rgba(255,255,255,0.025);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 14px;
-  padding: 1.5rem 1.75rem;
-}
-
-.faq-item h4 {
-  font-size: 0.9rem;
-  margin-bottom: 0.65rem;
-  line-height: 1.4;
-}
-
-.faq-item p {
-  font-size: 0.875rem;
-  opacity: 0.65;
-  line-height: 1.65;
-  margin: 0;
-}
-
-/* ── Alt cards ── */
-.alt-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-  max-width: 900px;
-  margin: 2.5rem auto 0;
-}
-
-@media (max-width: 750px) {
-  .alt-grid { grid-template-columns: 1fr; }
-}
-
-.alt-card {
-  background: rgba(255,255,255,0.025);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 14px;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.alt-card .alt-icon { font-size: 1.5rem; margin-bottom: 0.25rem; }
-.alt-card h3 { font-size: 0.95rem; margin: 0; }
-.alt-card p { font-size: 0.85rem; opacity: 0.6; line-height: 1.6; margin: 0; flex: 1; }
-.alt-card a { font-size: 0.85rem; color: var(--cyan, #00c8c8); text-decoration: none; margin-top: 0.5rem; }
-.alt-card a:hover { text-decoration: underline; }
-
-/* ── Section layout utility ── */
-.section-inner-narrow {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.section-body {
-  padding: 4rem 2rem;
-}
-
-@media (max-width: 600px) {
-  .section-body { padding: 3rem 1.25rem; }
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
