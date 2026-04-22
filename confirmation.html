@@ -409,15 +409,29 @@
     <!-- Heading -->
     <div class="confirm-label">You're all set</div>
     <h1 class="confirm-title">Your call is booked.</h1>
-    <p class="confirm-sub">We're looking forward to learning about your business. A confirmation email with your video link is on its way.</p>
+    <p class="confirm-sub" id="confirm-sub">We're looking forward to learning about your business. A confirmation email with your video link is on its way.</p>
 
     <!-- Booking summary -->
     <div class="booking-summary">
       <div class="summary-row">
+        <div class="summary-icon">👤</div>
+        <div>
+          <div class="summary-label">Name</div>
+          <div class="summary-value" id="client-name">—</div>
+        </div>
+      </div>
+      <div class="summary-row">
+        <div class="summary-icon">✉️</div>
+        <div>
+          <div class="summary-label">Email</div>
+          <div class="summary-value" id="client-email">—</div>
+        </div>
+      </div>
+      <div class="summary-row">
         <div class="summary-icon">📅</div>
         <div>
-          <div class="summary-label">Meeting</div>
-          <div class="summary-value">Free Discovery Call — NextLogicAI</div>
+          <div class="summary-label">Date &amp; Time</div>
+          <div class="summary-value" id="event-datetime">—</div>
         </div>
       </div>
       <div class="summary-row">
@@ -488,6 +502,46 @@
 <script>injectNav('contact'); injectFooter();</script>
 
 <script>
+  // ── Populate client info from Calendly URL params ──
+  (function populateClientInfo() {
+    const params = new URLSearchParams(window.location.search);
+
+    const name  = params.get('invitee_full_name') || params.get('name') || '';
+    const email = params.get('invitee_email')     || params.get('email') || '';
+    const start = params.get('event_start_time')  || '';
+
+    // Name
+    if (name) {
+      document.getElementById('client-name').textContent = name;
+      const firstName = name.split(' ')[0];
+      document.getElementById('confirm-sub').textContent =
+        `Thanks ${firstName} — we're looking forward to learning about your business. A confirmation email with your video link is on its way.`;
+    }
+
+    // Email
+    if (email) {
+      document.getElementById('client-email').textContent = email;
+    }
+
+    // Date & time — formatted nicely e.g. "Tuesday, April 22 at 2:00 PM MDT"
+    if (start) {
+      try {
+        const dt = new Date(start);
+        const formatted = dt.toLocaleString('en-CA', {
+          weekday: 'long',
+          month:   'long',
+          day:     'numeric',
+          hour:    'numeric',
+          minute:  '2-digit',
+          timeZoneName: 'short'
+        });
+        document.getElementById('event-datetime').textContent = formatted;
+      } catch (e) {
+        document.getElementById('event-datetime').textContent = start;
+      }
+    }
+  })();
+
   // ── Calendar dropdown toggle ──
   function toggleCalDropdown() {
     const opts = document.getElementById('calOptions');
